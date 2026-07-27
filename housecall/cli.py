@@ -6,6 +6,7 @@ Implements the HouseCall command-line interface.
 
 from .report import save_json
 from .scanner import scan
+from .analyzer import analyze
 
 
 def main():
@@ -14,6 +15,7 @@ def main():
     print("=" * 50)
 
     inventory = scan()
+    findings = analyze(inventory)
 
     save_json(inventory)
 
@@ -28,6 +30,14 @@ def main():
     print(f"Unavailable  : {summary['unavailable']}")
     print(f"Unknown      : {summary['unknown']}")
 
+    if summary["unavailable_entities"]:
+        print()
+        print("Unavailable Entities")
+        print("-" * 25)
+
+        for entity in summary["unavailable_entities"]:
+            print(f"  • {entity}")
+
     print()
     print("Top Domains")
     print("-" * 25)
@@ -38,6 +48,16 @@ def main():
         reverse=True,
     ):
         print(f"{domain:<20} {count}")
+
+    print()
+    print("Findings")
+    print("-" * 25)
+
+    for warning in findings["warnings"]:
+        print(f"⚠ {warning}")
+
+    for info in findings["info"]:
+        print(f"ℹ {info}")
 
     print()
     print("✅ Inventory written to inventory.json")
