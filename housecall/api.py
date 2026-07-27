@@ -1,38 +1,44 @@
-# Talks to Home Assistant
+"""
+HouseCall - Home Assistant Inventory & Analysis Tool
+
+Communicates with the Home Assistant REST API.
+"""
 
 import requests
 
 from .config import HA_TOKEN, HA_URL
 
 
+class HomeAssistantClient:
+    """Simple client for the Home Assistant REST API."""
+
+    def __init__(self):
+        self.session = requests.Session()
+
+        self.session.headers.update({
+            "Authorization": f"Bearer {HA_TOKEN}",
+            "Content-Type": "application/json",
+        })
+
+    def get(self, endpoint):
+        """Retrieve data from a Home Assistant API endpoint."""
+
+        response = self.session.get(
+            f"{HA_URL}{endpoint}",
+            timeout=30,
+        )
+
+        response.raise_for_status()
+
+        return response.json()
+
+
+client = HomeAssistantClient()
+
+
 def get_config():
-    headers = {
-        "Authorization": f"Bearer {HA_TOKEN}",
-        "Content-Type": "application/json",
-    }
+    return client.get("/api/config")
 
-    response = requests.get(
-        f"{HA_URL}/api/config",
-        headers=headers,
-        timeout=10,
-    )
-
-    response.raise_for_status()
-
-    return response.json()
 
 def get_states():
-    headers = {
-        "Authorization": f"Bearer {HA_TOKEN}",
-        "Content-Type": "application/json",
-    }
-
-    response = requests.get(
-        f"{HA_URL}/api/states",
-        headers=headers,
-        timeout=30,
-    )
-
-    response.raise_for_status()
-
-    return response.json()
+    return client.get("/api/states")
