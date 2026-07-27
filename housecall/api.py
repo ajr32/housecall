@@ -20,3 +20,19 @@ def get_config():
     response.raise_for_status()
 
     return response.json()
+
+def get_states():
+    headers = {
+        "Authorization": f"Bearer {HA_TOKEN}",
+        "Content-Type": "application/json",
+    }
+
+    response = requests.get(
+        f"{HA_URL}/api/states",
+        headers=headers,
+        timeout=30,
+    )
+
+    response.raise_for_status()
+
+    return response.json()

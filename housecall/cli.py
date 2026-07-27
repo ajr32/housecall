@@ -1,6 +1,7 @@
 # user interface/commands
 
-from .api import get_config
+from .scanner import scan
+from .report import save_json
 
 
 def main():
@@ -8,16 +9,12 @@ def main():
     print("🏠 HouseCall")
     print("=" * 50)
 
-    print("Connecting to Home Assistant...")
+    inventory = scan()
 
-    try:
-        config = get_config()
+    save_json(inventory)
 
-        print("✅ Connected!")
-        print()
-        print(f"Version: {config['version']}")
-        print(f"Location: {config['location_name']}")
-        print(f"Time Zone: {config['time_zone']}")
-
-    except Exception as ex:
-        print(f"❌ {ex}")
+    print()
+    print("✅ Inventory written to inventory.json")
+    print()
+    print(f"Version : {inventory['config']['version']}")
+    print(f"States  : {len(inventory['states'])}")
