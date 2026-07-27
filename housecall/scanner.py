@@ -21,14 +21,21 @@ def scan():
     unavailable = 0
     unknown = 0
 
+    unavailable_entities = []
+    unknown_entities = []
+
     for state in states:
         domain = state["entity_id"].split(".")[0]
         domains[domain] += 1
 
         if state["state"] == "unavailable":
             unavailable += 1
+            unavailable_entities.append(state["entity_id"])
+
         elif state["state"] == "unknown":
             unknown += 1
+            unknown_entities.append(state["entity_id"])
+
         else:
             available += 1
 
@@ -41,5 +48,7 @@ def scan():
     "unavailable": unavailable,
     "unknown": unknown,
     "domains": dict(domains),
-        },
+    "unavailable_entities": unavailable_entities,
+    "unknown_entities": unknown_entities,
+                    },
     }
