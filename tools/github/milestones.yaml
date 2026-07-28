@@ -1,0 +1,30 @@
+milestones:
+  - title: "v0.1 Foundation"
+    description: "Core scanner and inventory functionality"
+
+  - title: "v0.2 Doctor"
+    description: "Health checks and diagnostics"
+
+  - title: "v0.3 Housekeeping"
+    description: "Cleanup and maintenance"
+
+  - title: "v0.4 Organization"
+    description: "Improve organization and structure"
+
+  - title: "v0.5 Dashboard Advisor"
+    description: "Analyze existing dashboards"
+
+  - title: "v0.6 Dashboard Designer"
+    description: "Design improved dashboards"
+
+  - title: "v0.7 Dashboard Generator"
+    description: "Generate Lovelace YAML"
+
+  - title: "v0.8 Discover"
+    description: "Find community ideas"
+
+  - title: "v0.9 Smart Advisor"
+    description: "Advanced recommendations"
+
+  - title: "v1.0 HouseCall"
+    description: "Complete Home Assistant consultant"
