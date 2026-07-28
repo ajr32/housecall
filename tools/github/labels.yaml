@@ -1,0 +1,68 @@
+labels:
+
+  # Areas
+  - name: api
+    color: "0052CC"
+    description: "Home Assistant API"
+
+  - name: scanner
+    color: "1D76DB"
+    description: "Scanning and inventory"
+
+  - name: doctor
+    color: "D73A4A"
+    description: "Health checks"
+
+  - name: housekeeping
+    color: "FBCA04"
+    description: "Cleanup"
+
+  - name: organization
+    color: "5319E7"
+    description: "Organization"
+
+  - name: dashboard
+    color: "0E8A16"
+    description: "Dashboard analysis"
+
+  - name: discover
+    color: "006B75"
+    description: "Community recommendations"
+
+  - name: report
+    color: "BFDADC"
+    description: "Report generation"
+
+  - name: documentation
+    color: "0075CA"
+    description: "Documentation"
+
+  # Type
+  - name: enhancement
+    color: "A2EEEF"
+    description: "New functionality"
+
+  - name: bug
+    color: "D73A4A"
+    description: "Something isn't working"
+
+  - name: refactor
+    color: "C2E0C6"
+    description: "Internal improvements"
+
+  # Difficulty
+  - name: good first issue
+    color: "7057FF"
+    description: "Good for new contributors"
+
+  - name: easy
+    color: "C5DEF5"
+    description: "Small task"
+
+  - name: medium
+    color: "FBCA04"
+    description: "Moderate effort"
+
+  - name: hard
+    color: "D93F0B"
+    description: "Large task"
