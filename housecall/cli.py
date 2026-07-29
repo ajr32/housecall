@@ -7,6 +7,7 @@ Implements the HouseCall command-line interface.
 from .report import save_json
 from .scanner import scan
 from .analyzer import analyze
+from .console import section
 
 import argparse
 import logging
@@ -59,8 +60,10 @@ def main():
     print(f"🏠 HouseCall v{settings.version}")
     print("=" * 50)
 
+    from .config import validate_configuration
     from .api import client
 
+    validate_configuration()
     print("Testing connection...")
     logger.info("Testing Home Assistant connection.")
 
@@ -76,7 +79,7 @@ def main():
     findings = analyze(inventory)
 
     logger.info("Writing inventory to inventory.json.")
-    save_json(inventory)
+    save_json(inventory, settings.output_file)
 
     summary = inventory["summary"]
 
@@ -86,9 +89,7 @@ def main():
         summary["unavailable"],
     )
 
-    print()
-    print("Inventory Summary")
-    print("-" * 25)
+    section("Inventory Summary")
 
     print(f"Total States : {summary['total_states']}")
     print(f"Available    : {summary['available']}")
@@ -103,9 +104,7 @@ def main():
         for entity in summary["unavailable_entities"]:
             print(f"  • {entity}")
 
-    print()
-    print("Top Domains")
-    print("-" * 25)
+    section("Top Domains")
 
     for domain, count in sorted(
         summary["domains"].items(),
@@ -114,9 +113,7 @@ def main():
     ):
         print(f"{domain:<20} {count}")
 
-    print()
-    print("Findings")
-    print("-" * 25)
+    section("Findings")
 
     for warning in findings["warnings"]:
         print(f"⚠ {warning}")

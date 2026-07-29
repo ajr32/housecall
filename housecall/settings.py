@@ -7,18 +7,15 @@ from dataclasses import dataclass
 
 @dataclass(frozen=True)
 class Settings:
-    """Application settings."""
-
     app_name: str = "HouseCall"
     version: str = "0.1.0"
 
-    request_timeout: int = 30
-
     output_file: str = "inventory.json"
 
-    log_level: str = "INFO"
+    request_timeout: int = 30
 
     log_directory: str = "logs"
+    log_level: str = "INFO"
 
 
 settings = Settings()

@@ -7,6 +7,7 @@ Communicates with the Home Assistant REST API.
 import requests
 
 from .config import HA_TOKEN, HA_URL
+from .settings import settings
 
 
 class HomeAssistantClient:
@@ -35,7 +36,7 @@ class HomeAssistantClient:
         try:
             response = self.session.get(
                 f"{HA_URL}{endpoint}",
-                timeout=30,
+                timeout=settings.request_timeout,
             )
 
             response.raise_for_status()
