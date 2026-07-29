@@ -1,4 +1,6 @@
-# Reads configuration
+"""
+HouseCall configuration management.
+"""
 
 import os
 
@@ -6,5 +8,19 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-HA_URL = os.getenv("HA_URL")
-HA_TOKEN = os.getenv("HA_TOKEN")
+
+def get_setting(name: str) -> str:
+    """Return a required configuration value."""
+
+    value = os.getenv(name)
+
+    if not value:
+        raise RuntimeError(
+            f"Missing required configuration setting: {name}"
+        )
+
+    return value
+
+
+HA_URL = get_setting("HA_URL").rstrip("/")
+HA_TOKEN = get_setting("HA_TOKEN")

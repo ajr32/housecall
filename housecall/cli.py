@@ -10,6 +10,15 @@ from .analyzer import analyze
 
 
 def main():
+    from .logging_config import configure_logging
+    import logging
+
+    configure_logging()
+
+    logger = logging.getLogger(__name__)
+
+    logger.info("HouseCall started.")
+
     print("=" * 50)
     print("🏠 HouseCall")
     print("=" * 50)
@@ -17,17 +26,29 @@ def main():
     from .api import client
 
     print("Testing connection...")
+    logger.info("Testing Home Assistant connection.")
 
     client.test_connection()
 
     print("✓ Connected\n")
+    logger.info("Successfully connected to Home Assistant.")
 
+    logger.info("Starting inventory scan.")
     inventory = scan()
+
+    logger.info("Running analysis.")
     findings = analyze(inventory)
 
+    logger.info("Writing inventory to inventory.json.")
     save_json(inventory)
 
     summary = inventory["summary"]
+
+    logger.info(
+        "Inventory complete: %d states, %d unavailable.",
+        summary["total_states"],
+        summary["unavailable"],
+    )
 
     print()
     print("Inventory Summary")
