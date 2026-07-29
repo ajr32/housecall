@@ -20,15 +20,31 @@ class HomeAssistantClient:
             "Content-Type": "application/json",
         })
 
+    def test_connection(self):
+        """Verify that Home Assistant is reachable."""
+
+        self.get("/api/")
+
     def get(self, endpoint):
         """Retrieve data from a Home Assistant API endpoint."""
 
-        response = self.session.get(
-            f"{HA_URL}{endpoint}",
-            timeout=30,
-        )
+        try:
+            response = self.session.get(
+                f"{HA_URL}{endpoint}",
+                timeout=30,
+            )
 
-        response.raise_for_status()
+            response.raise_for_status()
+
+        except requests.exceptions.ConnectionError:
+            raise RuntimeError(
+                "Unable to connect to Home Assistant."
+            )
+
+        except requests.exceptions.HTTPError as exc:
+            raise RuntimeError(
+                f"Authentication failed ({exc.response.status_code})."
+            )
 
         return response.json()
 

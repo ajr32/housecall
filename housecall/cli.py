@@ -14,6 +14,14 @@ def main():
     print("🏠 HouseCall")
     print("=" * 50)
 
+    from .api import client
+
+    print("Testing connection...")
+
+    client.test_connection()
+
+    print("✓ Connected\n")
+
     inventory = scan()
     findings = analyze(inventory)
 
