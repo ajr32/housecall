@@ -9,23 +9,45 @@ from .scanner import scan
 from .analyzer import analyze
 
 import argparse
+import logging
+
 from .settings import settings
 
-parser = argparse.ArgumentParser(
-    prog="housecall",
-    description="Analyze a Home Assistant installation."
-)
 
-parser.add_argument(
-    "--version",
-    action="version",
-    version=f"%(prog)s {settings.version}",
-)
-
-parser.parse_args()
 def main():
+    parser = argparse.ArgumentParser(
+        prog="housecall",
+        description="Analyze a Home Assistant installation."
+    )
+
+    parser.add_argument(
+        "--version",
+        action="version",
+        version=f"%(prog)s {settings.version}",
+    )
+
+    subparsers = parser.add_subparsers(dest="command")
+
+    subparsers.add_parser(
+        "test",
+        help="Test the Home Assistant connection.",
+    )
+
+    args = parser.parse_args()
+
+    if args.command == "test":
+        from .api import get_config
+
+        print("Testing connection...")
+
+        config = get_config()
+
+        print("✓ Connected\n")
+        print(f"Version : {config['version']}")
+        print(f"Location: {config['location_name']}")
+        return
+
     from .logging_config import configure_logging
-    import logging
 
     configure_logging()
 
