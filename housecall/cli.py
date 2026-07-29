@@ -8,7 +8,21 @@ from .report import save_json
 from .scanner import scan
 from .analyzer import analyze
 
+import argparse
+from .settings import settings
 
+parser = argparse.ArgumentParser(
+    prog="housecall",
+    description="Analyze a Home Assistant installation."
+)
+
+parser.add_argument(
+    "--version",
+    action="version",
+    version=f"%(prog)s {settings.version}",
+)
+
+parser.parse_args()
 def main():
     from .logging_config import configure_logging
     import logging
@@ -20,7 +34,7 @@ def main():
     logger.info("HouseCall started.")
 
     print("=" * 50)
-    print("🏠 HouseCall")
+    print(f"🏠 HouseCall v{settings.version}")
     print("=" * 50)
 
     from .api import client
