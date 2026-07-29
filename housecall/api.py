@@ -8,7 +8,7 @@ import requests
 
 from .config import HA_TOKEN, HA_URL
 from .settings import settings
-
+from .exceptions import APIError
 
 class HomeAssistantClient:
     """
@@ -42,12 +42,12 @@ class HomeAssistantClient:
             response.raise_for_status()
 
         except requests.exceptions.ConnectionError:
-            raise RuntimeError(
+            raise APIError(
                 "Unable to connect to Home Assistant."
             )
 
         except requests.exceptions.HTTPError as exc:
-            raise RuntimeError(
+            raise APIError(
                 f"Authentication failed ({exc.response.status_code})."
             )
 

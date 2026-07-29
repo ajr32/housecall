@@ -4,6 +4,7 @@ HouseCall configuration management.
 
 import os
 
+from .exceptions import ConfigurationError
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -15,7 +16,7 @@ def get_setting(name: str) -> str:
     value = os.getenv(name)
 
     if not value:
-        raise RuntimeError(
+        raise ConfigurationError(
             f"Missing required configuration setting: {name}"
         )
 
@@ -24,6 +25,7 @@ def get_setting(name: str) -> str:
 
 HA_URL = get_setting("HA_URL").rstrip("/")
 HA_TOKEN = get_setting("HA_TOKEN")
+
 
 def validate_configuration():
     """Validate the application configuration."""
