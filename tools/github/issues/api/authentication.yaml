@@ -1,0 +1,26 @@
+title: Implement Authentication Layer
+
+milestone: v0.1 Foundation
+
+labels:
+  - api
+  - enhancement
+  - medium
+
+body: |
+  ## Goal
+
+  Create a reusable authentication layer for all Home Assistant API requests.
+
+  ## Tasks
+
+  - Store authentication headers.
+  - Reuse HTTP sessions.
+  - Handle expired or invalid tokens.
+  - Provide consistent error handling.
+
+  ## Acceptance Criteria
+
+  - All API requests use the shared authentication layer.
+  - Invalid credentials raise clear errors.
+  - No duplicated authentication code exists.

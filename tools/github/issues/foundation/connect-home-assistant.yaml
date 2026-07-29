@@ -1,0 +1,29 @@
+title: Connect to Home Assistant
+
+milestone: v0.1 Foundation
+
+labels:
+  - api
+  - enhancement
+  - easy
+
+body: |
+  ## Goal
+
+  Establish an authenticated connection to Home Assistant.
+
+  ## Tasks
+
+  - Accept a Home Assistant URL.
+  - Accept a Long-Lived Access Token.
+  - Validate connectivity.
+  - Retrieve Home Assistant version.
+  - Display friendly error messages.
+
+  ## Acceptance Criteria
+
+  - Successful authentication.
+  - Network failures handled gracefully.
+  - Authentication failures handled gracefully.
+  - Home Assistant version displayed.
+  

@@ -3,6 +3,14 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/tools/github/issues/advisor" />
+      <excludeFolder url="file://$MODULE_DIR$/tools/github/issues/dashboard" />
+      <excludeFolder url="file://$MODULE_DIR$/tools/github/issues/designer" />
+      <excludeFolder url="file://$MODULE_DIR$/tools/github/issues/discover" />
+      <excludeFolder url="file://$MODULE_DIR$/tools/github/issues/doctor" />
+      <excludeFolder url="file://$MODULE_DIR$/tools/github/issues/housekeeping" />
+      <excludeFolder url="file://$MODULE_DIR$/tools/github/issues/organization" />
+      <excludeFolder url="file://$MODULE_DIR$/tools/github/issues/reporting" />
     </content>
     <orderEntry type="jdk" jdkName="C:\Projects\housecall\.venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

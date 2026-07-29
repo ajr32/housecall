@@ -1,0 +1,24 @@
+title: Create Getting Started Guide
+
+milestone: v0.1 Foundation
+
+labels:
+  - documentation
+  - good first issue
+
+body: |
+  ## Goal
+
+  Help first-time users install and run HouseCall.
+
+  ## Topics
+
+  - Installation
+  - Requirements
+  - Creating a Long-Lived Access Token
+  - First scan
+  - Understanding the report
+
+  ## Acceptance Criteria
+
+  - New users can complete their first scan without additional guidance.

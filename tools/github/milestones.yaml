@@ -1,30 +1,51 @@
 milestones:
+
   - title: "v0.1 Foundation"
-    description: "Core scanner and inventory functionality"
+    description: >
+      Core functionality. Connect to Home Assistant, build the inventory
+      model, provide the CLI, and establish the project architecture.
 
   - title: "v0.2 Doctor"
-    description: "Health checks and diagnostics"
+    description: >
+      Evaluate the health of a Home Assistant installation by detecting
+      unavailable entities, broken automations, stale integrations, and
+      other maintenance issues.
 
   - title: "v0.3 Housekeeping"
-    description: "Cleanup and maintenance"
+    description: >
+      Help users reduce clutter by identifying duplicate entities,
+      orphaned helpers, abandoned dashboards, and cleanup opportunities.
 
   - title: "v0.4 Organization"
-    description: "Improve organization and structure"
+    description: >
+      Analyze how Home Assistant is organized and recommend improvements
+      for dashboards, areas, devices, and overall structure.
 
   - title: "v0.5 Dashboard Advisor"
-    description: "Analyze existing dashboards"
+    description: >
+      Review existing dashboards, infer their purpose, and recommend
+      improved cards, layouts, and visualizations.
 
   - title: "v0.6 Dashboard Designer"
-    description: "Design improved dashboards"
+    description: >
+      Generate dashboard concepts and layouts based on the user's
+      existing entities, integrations, and goals.
 
   - title: "v0.7 Dashboard Generator"
-    description: "Generate Lovelace YAML"
+    description: >
+      Generate production-ready Lovelace YAML for dashboards and cards.
 
   - title: "v0.8 Discover"
-    description: "Find community ideas"
+    description: >
+      Optionally search trusted community resources to recommend
+      integrations, cards, and ideas relevant to the user's installation.
 
   - title: "v0.9 Smart Advisor"
-    description: "Advanced recommendations"
+    description: >
+      Combine previous analyses into intelligent, prioritized,
+      context-aware recommendations.
 
   - title: "v1.0 HouseCall"
-    description: "Complete Home Assistant consultant"
+    description: >
+      A complete Home Assistant consultant providing health, cleanup,
+      organization, dashboard analysis, discovery, and actionable reports.
