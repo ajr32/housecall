@@ -3,8 +3,8 @@ Health check model for HouseCall.
 """
 
 from abc import ABC, abstractmethod
-
 from .diagnostics import Diagnostic
+from .scanner import scan
 
 
 class HealthCheck(ABC):
@@ -66,7 +66,34 @@ class ConnectionHealthCheck(HealthCheck):
                 str(exc),
             )
 
+
+class UnavailableEntitiesHealthCheck(HealthCheck):
+    """Checks for unavailable Home Assistant entities."""
+
+    def __init__(self):
+        super().__init__("Unavailable Entities")
+
+    def run(self) -> Diagnostic:
+        inventory = scan()
+
+        unavailable = inventory["summary"]["unavailable_entities"]
+
+        if unavailable:
+            return Diagnostic(
+                self.name,
+                False,
+                f"{len(unavailable)} unavailable entities detected.",
+            )
+
+        return Diagnostic(
+            self.name,
+            True,
+            "No unavailable entities found.",
+        )
+
+
 HEALTH_CHECKS = [
     ConfigurationHealthCheck(),
     ConnectionHealthCheck(),
+    UnavailableEntitiesHealthCheck(),
 ]
