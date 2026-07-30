@@ -9,12 +9,47 @@ from .scanner import scan
 from .analyzer import analyze
 from .console import section
 from .diagnostics import DiagnosticRunner
+from .settings import settings
+from .home import show_home
+from .commands import run_doctor
 
 import argparse
 import logging
 
-from .settings import settings
 
+def show_menu():
+    pass
+
+def run_doctor():
+    """Run HouseCall diagnostics."""
+
+    runner = DiagnosticRunner()
+
+    print("HouseCall Doctor")
+    print("-----------------")
+    print()
+
+    from .health import HEALTH_CHECKS
+
+    for check in HEALTH_CHECKS:
+        runner.add(check.run())
+
+    for result in runner.results:
+        status = "✓" if result.passed else "✗"
+        print(f"{status} {result.name}: {result.message}")
+
+    print()
+    print("Summary")
+    print("-------")
+    print(f"Checks run : {len(runner.results)}")
+    print(f"Passed     : {runner.passed}")
+    print(f"Failed     : {runner.failed}")
+    print()
+
+    if runner.success:
+        print("✓ No problems found.")
+    else:
+        print("✗ One or more diagnostics failed.")
 
 def main():
     parser = argparse.ArgumentParser(
@@ -42,6 +77,10 @@ def main():
 
     args = parser.parse_args()
 
+    if args.command is None:
+        show_home()
+        return
+
     if args.command == "test":
         from .api import get_config
 
@@ -55,30 +94,7 @@ def main():
         return
 
     if args.command == "doctor":
-        runner = DiagnosticRunner()
-
-        print("HouseCall Doctor")
-        print("-----------------")
-        print()
-
-        # Configuration
-        from .health import HEALTH_CHECKS
-
-        for check in HEALTH_CHECKS:
-            runner.add(check.run())
-
-        # Display results
-        for result in runner.results:
-            status = "✓" if result.passed else "✗"
-            print(f"{status} {result.name}: {result.message}")
-
-        print()
-
-        if runner.success:
-            print("✓ No problems found.")
-        else:
-            print("✗ One or more diagnostics failed.")
-
+        run_doctor()
         return
 
     from .logging_config import configure_logging

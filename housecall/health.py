@@ -91,9 +91,34 @@ class UnavailableEntitiesHealthCheck(HealthCheck):
             "No unavailable entities found.",
         )
 
+class UnknownEntitiesHealthCheck(HealthCheck):
+    """Checks for unknown Home Assistant entities."""
+
+    def __init__(self):
+        super().__init__("Unknown Entities")
+
+    def run(self) -> Diagnostic:
+        inventory = scan()
+
+        unknown = inventory["summary"]["unknown_entities"]
+
+        if unknown:
+            return Diagnostic(
+                self.name,
+                False,
+                f"{len(unknown)} unknown entities detected.",
+            )
+
+        return Diagnostic(
+            self.name,
+            True,
+            "No unknown entities found.",
+        )
+
 
 HEALTH_CHECKS = [
     ConfigurationHealthCheck(),
     ConnectionHealthCheck(),
     UnavailableEntitiesHealthCheck(),
+    UnknownEntitiesHealthCheck(),
 ]

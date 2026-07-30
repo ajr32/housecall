@@ -31,3 +31,13 @@ class DiagnosticRunner:
     def success(self) -> bool:
         """Return True if every diagnostic passed."""
         return all(result.passed for result in self.results)
+
+    @property
+    def passed(self) -> int:
+        """Number of successful diagnostics."""
+        return sum(result.passed for result in self.results)
+
+    @property
+    def failed(self) -> int:
+        """Number of failed diagnostics."""
+        return sum(not result.passed for result in self.results)
