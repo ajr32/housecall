@@ -35,7 +35,7 @@ class ConfigurationHealthCheck(HealthCheck):
             return Diagnostic(
                 self.name,
                 True,
-                "Configuration OK",
+                "OK",
             )
         except Exception as exc:
             return Diagnostic(
@@ -60,7 +60,7 @@ class ConnectionHealthCheck(HealthCheck):
             return Diagnostic(
                 self.name,
                 True,
-                "Home Assistant connection",
+                "Connected",
             )
         except Exception as exc:
             return Diagnostic(
@@ -85,13 +85,13 @@ class UnavailableEntitiesHealthCheck(HealthCheck):
             return Diagnostic(
                 self.name,
                 False,
-                f"{len(unavailable)} unavailable entities detected.",
+                f"{len(unavailable)} unavailable entities detected",
             )
 
         return Diagnostic(
             self.name,
             True,
-            "No unavailable entities found.",
+            "None found.",
         )
 
 
@@ -110,13 +110,13 @@ class UnknownEntitiesHealthCheck(HealthCheck):
             return Diagnostic(
                 self.name,
                 False,
-                f"{len(unknown)} unknown entities detected.",
+                f"{len(unknown)} unknown entities detected",
             )
 
         return Diagnostic(
             self.name,
             True,
-            "No unknown entities found.",
+            "None found",
         )
 
 
