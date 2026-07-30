@@ -1,7 +1,8 @@
 """Interactive Home Screen for HouseCall."""
 
-from .settings import settings
 from .commands import run_doctor
+from .settings import settings
+
 
 def show_home():
     """Display the HouseCall home screen."""

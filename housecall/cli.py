@@ -4,21 +4,22 @@ HouseCall - Home Assistant Inventory & Analysis Tool
 Implements the HouseCall command-line interface.
 """
 
-from .report import save_json
-from .scanner import scan
-from .analyzer import analyze
-from .console import section
-from .diagnostics import DiagnosticRunner
-from .settings import settings
-from .home import show_home
-from .commands import run_doctor
-
 import argparse
 import logging
+
+from .analyzer import analyze
+from .commands import run_doctor
+from .console import section
+from .diagnostics import DiagnosticRunner
+from .home import show_home
+from .report import save_json
+from .scanner import scan
+from .settings import settings
 
 
 def show_menu():
     pass
+
 
 def run_doctor():
     """Run HouseCall diagnostics."""
@@ -50,6 +51,7 @@ def run_doctor():
         print("✓ No problems found.")
     else:
         print("✗ One or more diagnostics failed.")
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -156,9 +158,9 @@ def main():
     section("Top Domains")
 
     for domain, count in sorted(
-        summary["domains"].items(),
-        key=lambda item: item[1],
-        reverse=True,
+            summary["domains"].items(),
+            key=lambda item: item[1],
+            reverse=True,
     ):
         print(f"{domain:<20} {count}")
 

@@ -5,11 +5,11 @@ Diagnostic framework for HouseCall.
 
 class Diagnostic:
     def __init__(
-        self,
-        name: str,
-        passed: bool,
-        message: str = "",
-        details: list[str] | None = None,
+            self,
+            name: str,
+            passed: bool,
+            message: str = "",
+            details: list[str] | None = None,
     ):
         self.name = name
         self.passed = passed

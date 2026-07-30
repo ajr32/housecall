@@ -10,6 +10,7 @@ from .config import HA_TOKEN, HA_URL
 from .settings import settings
 from .exceptions import APIError
 
+
 class HomeAssistantClient:
     """
     Wrapper around the Home Assistant REST API.
@@ -53,6 +54,7 @@ class HomeAssistantClient:
 
         return response.json()
 
+
 def post(self, endpoint, data=None):
     """Send data to a Home Assistant API endpoint."""
 
@@ -90,6 +92,7 @@ def delete(self, endpoint):
     )
 
     response.raise_for_status()
+
 
 client = HomeAssistantClient()
 

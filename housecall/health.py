@@ -3,6 +3,7 @@ Health check model for HouseCall.
 """
 
 from abc import ABC, abstractmethod
+
 from .diagnostics import Diagnostic
 from .scanner import scan
 
@@ -17,6 +18,7 @@ class HealthCheck(ABC):
     def run(self) -> Diagnostic:
         """Run the health check and return a Diagnostic."""
         pass
+
 
 from .config import validate_configuration
 
@@ -41,6 +43,7 @@ class ConfigurationHealthCheck(HealthCheck):
                 False,
                 str(exc),
             )
+
 
 from .api import client
 
@@ -90,6 +93,7 @@ class UnavailableEntitiesHealthCheck(HealthCheck):
             True,
             "No unavailable entities found.",
         )
+
 
 class UnknownEntitiesHealthCheck(HealthCheck):
     """Checks for unknown Home Assistant entities."""

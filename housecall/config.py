@@ -4,8 +4,9 @@ HouseCall configuration management.
 
 import os
 
-from .exceptions import ConfigurationError
 from dotenv import load_dotenv
+
+from .exceptions import ConfigurationError
 
 load_dotenv()
 
