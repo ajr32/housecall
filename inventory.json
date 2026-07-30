@@ -554,7 +554,7 @@
     },
     {
       "entity_id": "sensor.solar_insolation_energy",
-      "state": "453.433",
+      "state": "454.148",
       "attributes": {
         "state_class": "total",
         "source": "sensor.solar_insolation_instant",
@@ -562,11 +562,11 @@
         "icon": "mdi:chart-histogram",
         "friendly_name": "solar_insolation_energy"
       },
-      "last_changed": "2026-07-29T19:26:54.413389+00:00",
-      "last_reported": "2026-07-29T19:26:54.413389+00:00",
-      "last_updated": "2026-07-29T19:26:54.413389+00:00",
+      "last_changed": "2026-07-29T23:41:12.446711+00:00",
+      "last_reported": "2026-07-29T23:41:12.446711+00:00",
+      "last_updated": "2026-07-29T23:41:12.446711+00:00",
       "context": {
-        "id": "01KYQNG6EDBC7S902JYBY1724F",
+        "id": "01KYR41TVYJE8QDN43A8XG88T5",
         "parent_id": null,
         "user_id": null
       }
@@ -690,9 +690,9 @@
                 "pageid": 77457027,
                 "lang": "en",
                 "dir": "ltr",
-                "revision": "1366577303",
-                "tid": "019798b7-8ac8-11f1-b974-22dcede043ce",
-                "timestamp": "2026-07-28T21:05:05Z",
+                "revision": "1366748008",
+                "tid": "199317df-8ba9-11f1-ae3b-271def663a19",
+                "timestamp": "2026-07-29T23:56:22Z",
                 "description": "2024 mass stabbing in North West England",
                 "description_source": "local",
                 "content_urls": {
@@ -1841,7 +1841,7 @@
                 "lang": "en",
                 "dir": "ltr",
                 "revision": "1365335606",
-                "tid": "8e2bde1d-853b-11f1-8b68-b3e92642663a",
+                "tid": "8e2bde0f-853b-11f1-bcff-aee02bcf8e0a",
                 "timestamp": "2026-07-21T19:37:06Z",
                 "description": "Prime Minister of the United Kingdom from 1979 to 1990",
                 "description_source": "local",
@@ -2471,7 +2471,7 @@
                 "lang": "en",
                 "dir": "ltr",
                 "revision": "1366172729",
-                "tid": "4a611b20-8921-11f1-b654-4a6e57bc7a7c",
+                "tid": "4a611b9f-8921-11f1-acd6-2f64dd0cafd4",
                 "timestamp": "2026-07-26T18:39:10Z",
                 "description": "President of Iran from 1980 to 1981",
                 "description_source": "local",
@@ -3779,7 +3779,7 @@
                 "lang": "en",
                 "dir": "ltr",
                 "revision": "1366241734",
-                "tid": "a42e0f76-8952-11f1-9bf2-ca54fff54fe0",
+                "tid": "a42e0b7a-8952-11f1-aeb0-a11cd8b97e40",
                 "timestamp": "2026-07-27T00:32:26Z",
                 "description": "World War II general, U.S. president from 1953 to 1961",
                 "description_source": "local",
@@ -3939,7 +3939,7 @@
                 "lang": "en",
                 "dir": "ltr",
                 "revision": "1363588816",
-                "tid": "1bb93642-7cdb-11f1-98e9-b31b882addb8",
+                "tid": "1bb9347c-7cdb-11f1-a43c-4acb347799b7",
                 "timestamp": "2026-07-11T03:46:33Z",
                 "description": "International organisation",
                 "description_source": "local",
@@ -4154,9 +4154,9 @@
                 },
                 "lang": "en",
                 "dir": "ltr",
-                "revision": "1366669059",
-                "tid": "21ba6b17-8b47-11f1-b3d9-93bb752ee275",
-                "timestamp": "2026-07-29T12:15:05Z",
+                "revision": "1366743727",
+                "tid": "afc43f8f-8ba3-11f1-ae96-a2e7c74e3128",
+                "timestamp": "2026-07-29T23:17:37Z",
                 "description": "1950 U.S. mass killing of civilians during the Korean War",
                 "description_source": "local",
                 "coordinates": {
@@ -5030,9 +5030,9 @@
                 },
                 "lang": "en",
                 "dir": "ltr",
-                "revision": "1366710110",
-                "tid": "96f3638e-8b7a-11f1-95b4-9c11443f0eea",
-                "timestamp": "2026-07-29T18:23:26Z",
+                "revision": "1366739555",
+                "tid": "e4cd940b-8b9d-11f1-9e2d-603db779a589",
+                "timestamp": "2026-07-29T22:36:09Z",
                 "description": "Dictator of Germany from 1933 to 1945",
                 "description_source": "local",
                 "content_urls": {
@@ -5585,7 +5585,7 @@
                 "lang": "en",
                 "dir": "ltr",
                 "revision": "1365638138",
-                "tid": "0ebe1e9d-86ad-11f1-9342-476633d432c1",
+                "tid": "0ebe1e52-86ad-11f1-ae72-67a3ccf099d2",
                 "timestamp": "2026-07-23T15:42:06Z",
                 "description": "U.S. state",
                 "description_source": "local",
@@ -5644,9 +5644,9 @@
                 },
                 "lang": "en",
                 "dir": "ltr",
-                "revision": "1366635097",
-                "tid": "23b30807-8b0c-11f1-960c-704ff138010c",
-                "timestamp": "2026-07-29T05:12:48Z",
+                "revision": "1366731992",
+                "tid": "d37f8913-8b93-11f1-bf5f-6633a4317420",
+                "timestamp": "2026-07-29T21:24:05Z",
                 "description": "King of Italy from 1878 to 1900",
                 "description_source": "local",
                 "content_urls": {
@@ -5734,9 +5734,9 @@
                 },
                 "lang": "en",
                 "dir": "ltr",
-                "revision": "1366692725",
-                "tid": "5852afc0-8b64-11f1-afd6-a176ae7050f8",
-                "timestamp": "2026-07-29T15:44:12Z",
+                "revision": "1366732174",
+                "tid": "10e41847-8b94-11f1-8265-12775b17e113",
+                "timestamp": "2026-07-29T21:25:48Z",
                 "description": "Italian anarchist and assassin (1869\u20131901)",
                 "description_source": "local",
                 "content_urls": {
@@ -6950,9 +6950,9 @@
                 },
                 "lang": "en",
                 "dir": "ltr",
-                "revision": "1366706374",
-                "tid": "e7b4912c-8b75-11f1-ba70-b3800c6c1a53",
-                "timestamp": "2026-07-29T17:49:54Z",
+                "revision": "1366729917",
+                "tid": "e6dd26c1-8b90-11f1-ae33-154826d4a127",
+                "timestamp": "2026-07-29T21:03:09Z",
                 "description": "French optical physicist (1788\u20131827)",
                 "description_source": "local",
                 "content_urls": {
@@ -7056,9 +7056,9 @@
                 },
                 "lang": "en",
                 "dir": "ltr",
-                "revision": "1366675934",
-                "tid": "0869ed4f-8b50-11f1-994f-b73f2674c605",
-                "timestamp": "2026-07-29T13:18:48Z",
+                "revision": "1366743215",
+                "tid": "0f6e1bf1-8ba3-11f1-b812-87a2d68129c2",
+                "timestamp": "2026-07-29T23:13:08Z",
                 "description": "U.S. Founding Father and president from 1789 to 1797",
                 "description_source": "local",
                 "content_urls": {
@@ -7780,9 +7780,9 @@
                 },
                 "lang": "en",
                 "dir": "ltr",
-                "revision": "1366706347",
-                "tid": "dd9290c3-8b75-11f1-9ff3-fecedafb8d12",
-                "timestamp": "2026-07-29T17:49:37Z",
+                "revision": "1366729927",
+                "tid": "e775bb94-8b90-11f1-8c8c-b07f9086e519",
+                "timestamp": "2026-07-29T21:03:10Z",
                 "description": "King of Scotland from 1567 to 1625, King of England and Ireland from 1603",
                 "description_source": "local",
                 "content_urls": {
@@ -9592,9 +9592,9 @@
                 },
                 "lang": "en",
                 "dir": "ltr",
-                "revision": "1366693323",
-                "tid": "2beb6211-8b65-11f1-acd2-760af3f565a1",
-                "timestamp": "2026-07-29T15:50:07Z",
+                "revision": "1366735341",
+                "tid": "468aff23-8b98-11f1-ba11-eec92e8e5d8c",
+                "timestamp": "2026-07-29T21:55:56Z",
                 "description": "Continuation of the Roman Empire (330\u20131453)",
                 "description_source": "local",
                 "content_urls": {
@@ -9954,9 +9954,9 @@
                 },
                 "lang": "en",
                 "dir": "ltr",
-                "revision": "1360111839",
-                "tid": "e41808ee-6bbc-11f1-a6ac-6a4feadf87da",
-                "timestamp": "2026-06-19T08:57:25Z",
+                "revision": "1366733902",
+                "tid": "64effae4-8b96-11f1-8e1b-2f2431a5242b",
+                "timestamp": "2026-07-29T21:42:28Z",
                 "description": "Ancient Mesopotamian empire (626\u2013539 BC)",
                 "description_source": "local",
                 "content_urls": {
@@ -10092,10 +10092,10 @@
         "friendly_name": "on_this_day"
       },
       "last_changed": "2026-07-29T04:06:59.179832+00:00",
-      "last_reported": "2026-07-29T19:06:59.215796+00:00",
-      "last_updated": "2026-07-29T19:06:59.214521+00:00",
+      "last_reported": "2026-07-30T00:06:59.216959+00:00",
+      "last_updated": "2026-07-30T00:06:59.215703+00:00",
       "context": {
-        "id": "01KYQMBQ8ETX7GAWEDFG45JPHE",
+        "id": "01KYR5H1CFJBPXKG6CDTGEP0R6",
         "parent_id": null,
         "user_id": null
       }
@@ -10145,36 +10145,36 @@
     },
     {
       "entity_id": "sensor.solar_since_feb_27",
-      "state": "3882.5",
+      "state": "3886.0",
       "attributes": {
         "state_class": "total",
         "unit_of_measurement": "kWh",
         "device_class": "energy",
         "friendly_name": "Solar Since Feb 27"
       },
-      "last_changed": "2026-07-29T19:26:54.428618+00:00",
-      "last_reported": "2026-07-29T19:26:54.428618+00:00",
-      "last_updated": "2026-07-29T19:26:54.428618+00:00",
+      "last_changed": "2026-07-29T23:08:38.661908+00:00",
+      "last_reported": "2026-07-29T23:08:38.661908+00:00",
+      "last_updated": "2026-07-29T23:08:38.661908+00:00",
       "context": {
-        "id": "01KYQNG6EW11Y4RJEVSPS5QDVY",
+        "id": "01KYR266W5ZVYFZKQ2N8HZPD2W",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.solar_progress",
-      "state": "882.5",
+      "state": "886.0",
       "attributes": {
         "state_class": "total",
         "unit_of_measurement": "kWh",
         "device_class": "energy",
         "friendly_name": "Solar Progress"
       },
-      "last_changed": "2026-07-29T19:26:54.428962+00:00",
-      "last_reported": "2026-07-29T19:26:54.428962+00:00",
-      "last_updated": "2026-07-29T19:26:54.428962+00:00",
+      "last_changed": "2026-07-29T23:08:38.662202+00:00",
+      "last_reported": "2026-07-29T23:08:38.662202+00:00",
+      "last_updated": "2026-07-29T23:08:38.662202+00:00",
       "context": {
-        "id": "01KYQNG6EW11Y4RJEVSPS5QDVY",
+        "id": "01KYR266W5ZVYFZKQ2N8HZPD2W",
         "parent_id": null,
         "user_id": null
       }
@@ -10336,18 +10336,18 @@
         "in_zones": [
           "zone.home"
         ],
-        "latitude": 39.20337424881175,
-        "longitude": -76.80442193865807,
-        "gps_accuracy": 6.021142244223569,
+        "latitude": 39.203375351192754,
+        "longitude": -76.8044198879412,
+        "gps_accuracy": 13.927618604446915,
         "source": "device_tracker.andys_phone",
         "user_id": "6a012e1641eb4d479007ba91a8c32352",
         "friendly_name": "Andrew Rosenthal"
       },
       "last_changed": "2026-07-27T19:10:50.095839+00:00",
-      "last_reported": "2026-07-29T18:04:01.663647+00:00",
-      "last_updated": "2026-07-29T18:04:01.663647+00:00",
+      "last_reported": "2026-07-29T22:31:09.367015+00:00",
+      "last_updated": "2026-07-29T22:31:09.367015+00:00",
       "context": {
-        "id": "01KYQGRE7ZJ6FHT4DNQ3HQSFQN",
+        "id": "01KYR01J9QHSHSQ48C6CXQ9198",
         "parent_id": null,
         "user_id": null
       }
@@ -10429,35 +10429,35 @@
     },
     {
       "entity_id": "sensor.solar_insolation_instant",
-      "state": "847.6",
+      "state": "0",
       "attributes": {
         "unit_of_measurement": "W/m\u00b2",
         "device_class": "power",
         "friendly_name": "Solar Insolation Instant"
       },
-      "last_changed": "2026-07-29T19:26:54.413193+00:00",
-      "last_reported": "2026-07-29T19:26:54.413193+00:00",
-      "last_updated": "2026-07-29T19:26:54.413193+00:00",
+      "last_changed": "2026-07-29T23:47:31.475201+00:00",
+      "last_reported": "2026-07-29T23:47:31.475201+00:00",
+      "last_updated": "2026-07-29T23:47:31.475201+00:00",
       "context": {
-        "id": "01KYQNG6EC506ZV7Z9MJD84563",
+        "id": "01KYR4DD0JJS5MN01KPXVXPH6F",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.solar_production_since_feb_26",
-      "state": "120.28629",
+      "state": "120.289853",
       "attributes": {
         "state_class": "total_increasing",
         "unit_of_measurement": "kWh",
         "device_class": "energy",
         "friendly_name": "Solar Production Since Feb 26"
       },
-      "last_changed": "2026-07-29T19:26:54.428791+00:00",
-      "last_reported": "2026-07-29T19:26:54.428791+00:00",
-      "last_updated": "2026-07-29T19:26:54.428791+00:00",
+      "last_changed": "2026-07-29T23:44:21.463059+00:00",
+      "last_reported": "2026-07-29T23:44:21.463059+00:00",
+      "last_updated": "2026-07-29T23:44:21.463059+00:00",
       "context": {
-        "id": "01KYQNG6EW11Y4RJEVSPS5QDVY",
+        "id": "01KYR47KEP3C0QJ8KAH8Z1AVKC",
         "parent_id": null,
         "user_id": null
       }
@@ -10757,16 +10757,16 @@
         "next_noon": "2026-07-30T17:13:42+00:00",
         "next_rising": "2026-07-30T10:06:03.103420+00:00",
         "next_setting": "2026-07-30T00:21:43.623933+00:00",
-        "elevation": 54.85,
-        "azimuth": 243.69,
+        "elevation": 1.83,
+        "azimuth": 292.91,
         "rising": false,
         "friendly_name": "Sun"
       },
       "last_changed": "2026-07-29T10:04:27.439900+00:00",
-      "last_reported": "2026-07-29T19:26:04.456357+00:00",
-      "last_updated": "2026-07-29T19:25:44.039754+00:00",
+      "last_reported": "2026-07-30T00:09:05.562133+00:00",
+      "last_updated": "2026-07-30T00:08:46.291076+00:00",
       "context": {
-        "id": "01KYQNE1Q70E6P57R872ETDWKK",
+        "id": "01KYR5M9YKZ63Q3C8HKKK8GTZH",
         "parent_id": null,
         "user_id": null
       }
@@ -10869,38 +10869,38 @@
     },
     {
       "entity_id": "sensor.time_date",
-      "state": "15:27, 2026-07-29",
+      "state": "20:10, 2026-07-29",
       "attributes": {
         "icon": "mdi:calendar-clock",
         "friendly_name": "Time & Date"
       },
-      "last_changed": "2026-07-29T19:27:00.001265+00:00",
-      "last_reported": "2026-07-29T19:27:00.001563+00:00",
-      "last_updated": "2026-07-29T19:27:00.001265+00:00",
+      "last_changed": "2026-07-30T00:10:00.003826+00:00",
+      "last_reported": "2026-07-30T00:10:00.004129+00:00",
+      "last_updated": "2026-07-30T00:10:00.003826+00:00",
       "context": {
-        "id": "01KYQNGBX1RMTXQ4ZGW6VRBG2T",
+        "id": "01KYR5PHY3E7CVVS629H2R5TZN",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.solar_insolation_daily",
-      "state": "4.569",
+      "state": "5.284",
       "attributes": {
         "state_class": "total_increasing",
         "status": "collecting",
         "last_period": "3.251",
-        "last_valid_state": "453.433",
+        "last_valid_state": "454.148",
         "last_reset": "2026-07-29T04:00:00.060786+00:00",
         "next_reset": "2026-07-30T00:00:00-04:00",
         "unit_of_measurement": "kW/m\u00b2h",
         "friendly_name": "solar_insolation_daily"
       },
-      "last_changed": "2026-07-29T19:26:54.413533+00:00",
-      "last_reported": "2026-07-29T19:26:54.413533+00:00",
-      "last_updated": "2026-07-29T19:26:54.413533+00:00",
+      "last_changed": "2026-07-29T23:41:12.446859+00:00",
+      "last_reported": "2026-07-29T23:41:12.446859+00:00",
+      "last_updated": "2026-07-29T23:41:12.446859+00:00",
       "context": {
-        "id": "01KYQNG6EDF03KQ55JNYHYYBFN",
+        "id": "01KYR41TVYGBACD3YYTGJM2EX8",
         "parent_id": null,
         "user_id": null
       }
@@ -10924,7 +10924,7 @@
     },
     {
       "entity_id": "sensor.solar_insolation_daily_stats",
-      "state": "2.9",
+      "state": "2.92",
       "attributes": {
         "state_class": "measurement",
         "age_coverage_ratio": 0.85,
@@ -10933,11 +10933,11 @@
         "icon": "mdi:calculator",
         "friendly_name": "solar_insolation_daily_stats"
       },
-      "last_changed": "2026-07-29T18:59:29.370066+00:00",
-      "last_reported": "2026-07-29T18:59:29.370066+00:00",
-      "last_updated": "2026-07-29T18:59:29.370066+00:00",
+      "last_changed": "2026-07-29T22:15:45.440051+00:00",
+      "last_reported": "2026-07-29T22:15:45.440051+00:00",
+      "last_updated": "2026-07-29T22:15:45.440051+00:00",
       "context": {
-        "id": "01KYQKXZYTQKDHPDYEDJXGRSAF",
+        "id": "01KYQZ5C1038E47KYXTDD2C508",
         "parent_id": null,
         "user_id": null
       }
@@ -11467,19 +11467,19 @@
           "zone.home"
         ],
         "source_type": "gps",
-        "battery_level": 40,
-        "latitude": 39.20337424881175,
-        "longitude": -76.80442193865807,
-        "gps_accuracy": 6.021142244223569,
-        "altitude": 117.02037811279297,
+        "battery_level": 100,
+        "latitude": 39.203375351192754,
+        "longitude": -76.8044198879412,
+        "gps_accuracy": 13.927618604446915,
+        "altitude": 115.61196616989075,
         "vertical_accuracy": 30,
         "friendly_name": "Andy\u2019s Phone"
       },
-      "last_changed": "2026-07-29T18:04:01.663510+00:00",
-      "last_reported": "2026-07-29T18:04:01.663510+00:00",
-      "last_updated": "2026-07-29T18:04:01.663510+00:00",
+      "last_changed": "2026-07-29T22:31:09.366875+00:00",
+      "last_reported": "2026-07-29T22:31:09.366875+00:00",
+      "last_updated": "2026-07-29T22:31:09.366875+00:00",
       "context": {
-        "id": "01KYQGRE7Z1SZFZ396GNHMGBXE",
+        "id": "01KYR01J9PZKB2432X16SNWN4Z",
         "parent_id": null,
         "user_id": null
       }
@@ -11518,18 +11518,18 @@
     },
     {
       "entity_id": "sensor.andys_phone_battery_level",
-      "state": "40",
+      "state": "100",
       "attributes": {
         "unit_of_measurement": "%",
         "device_class": "battery",
-        "icon": "mdi:battery-40",
+        "icon": "mdi:battery",
         "friendly_name": "Andy\u2019s Phone Battery Level"
       },
-      "last_changed": "2026-07-29T18:04:01.778545+00:00",
-      "last_reported": "2026-07-29T18:04:01.778545+00:00",
-      "last_updated": "2026-07-29T18:04:01.778545+00:00",
+      "last_changed": "2026-07-29T21:49:56.761748+00:00",
+      "last_reported": "2026-07-29T22:31:09.650698+00:00",
+      "last_updated": "2026-07-29T22:31:09.650698+00:00",
       "context": {
-        "id": "01KYQGREBJP5ZN7CQT44STC4XH",
+        "id": "01KYR01JJJSN04YQ6AMR0YV64D",
         "parent_id": null,
         "user_id": null
       }
@@ -11568,17 +11568,17 @@
     },
     {
       "entity_id": "sensor.andys_phone_battery_state",
-      "state": "Not Charging",
+      "state": "Full",
       "attributes": {
         "Low Power Mode": false,
-        "icon": "mdi:battery-40",
+        "icon": "mdi:battery",
         "friendly_name": "Andy\u2019s Phone Battery State"
       },
-      "last_changed": "2026-07-29T12:34:12.083058+00:00",
-      "last_reported": "2026-07-29T17:58:43.557664+00:00",
-      "last_updated": "2026-07-29T17:58:43.557664+00:00",
+      "last_changed": "2026-07-29T22:31:09.650856+00:00",
+      "last_reported": "2026-07-29T22:31:09.650856+00:00",
+      "last_updated": "2026-07-29T22:31:09.650856+00:00",
       "context": {
-        "id": "01KYQGEQK5WBVQ72CE5QC6WHH1",
+        "id": "01KYR01JJJYKK1YH4E2KF0TBDR",
         "parent_id": null,
         "user_id": null
       }
@@ -12172,7 +12172,7 @@
     },
     {
       "entity_id": "sensor.envoy_482539015436_lifetime_net_energy_consumption_cost",
-      "state": "54.676914",
+      "state": "55.414286",
       "attributes": {
         "state_class": "total",
         "last_reset": "2026-07-14T22:07:36.340677+00:00",
@@ -12180,18 +12180,18 @@
         "device_class": "monetary",
         "friendly_name": "sensor Cost"
       },
-      "last_changed": "2026-07-29T19:11:03.721947+00:00",
-      "last_reported": "2026-07-29T19:11:03.721947+00:00",
-      "last_updated": "2026-07-29T19:11:03.721947+00:00",
+      "last_changed": "2026-07-30T00:09:38.752795+00:00",
+      "last_reported": "2026-07-30T00:09:38.752795+00:00",
+      "last_updated": "2026-07-30T00:09:38.752795+00:00",
       "context": {
-        "id": "01KYQMK619CGA7AJX9812XDQNT",
+        "id": "01KYR5NX60KX6B33BR591CYB0S",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.envoy_482539015436_lifetime_net_energy_production_compensation",
-      "state": "33.613838",
+      "state": "33.753278",
       "attributes": {
         "state_class": "total",
         "last_reset": "2026-07-14T22:07:36.341271+00:00",
@@ -12199,11 +12199,11 @@
         "device_class": "monetary",
         "friendly_name": "sensor Compensation"
       },
-      "last_changed": "2026-07-29T19:26:54.429290+00:00",
-      "last_reported": "2026-07-29T19:26:54.429290+00:00",
-      "last_updated": "2026-07-29T19:26:54.429290+00:00",
+      "last_changed": "2026-07-29T21:24:50.436048+00:00",
+      "last_reported": "2026-07-29T21:24:50.436048+00:00",
+      "last_updated": "2026-07-29T21:24:50.436048+00:00",
       "context": {
-        "id": "01KYQNG6EXY7D7D8Q7KQZPBBK7",
+        "id": "01KYQW84M4TY5HAY4YSBZGZJZD",
         "parent_id": null,
         "user_id": null
       }
@@ -13103,13 +13103,13 @@
       "entity_id": "weather.kbwi",
       "state": "cloudy",
       "attributes": {
-        "temperature": 82,
+        "temperature": 77,
         "temperature_unit": "\u00b0F",
-        "humidity": 51,
-        "pressure": 29.66,
+        "humidity": 61,
+        "pressure": 29.69,
         "pressure_unit": "inHg",
-        "wind_bearing": 300.0,
-        "wind_speed": 13.8,
+        "wind_bearing": 290.0,
+        "wind_speed": 9.22,
         "wind_speed_unit": "mph",
         "visibility": 10.0,
         "visibility_unit": "mi",
@@ -13118,11 +13118,11 @@
         "friendly_name": "Baltimore",
         "supported_features": 6
       },
-      "last_changed": "2026-07-29T17:07:45.657121+00:00",
-      "last_reported": "2026-07-29T19:27:46.726373+00:00",
-      "last_updated": "2026-07-29T19:27:46.726373+00:00",
+      "last_changed": "2026-07-29T22:27:46.680310+00:00",
+      "last_reported": "2026-07-30T00:07:47.751047+00:00",
+      "last_updated": "2026-07-30T00:07:47.751047+00:00",
       "context": {
-        "id": "01KYQNHSH6AAYP4NQXJC1EG220",
+        "id": "01KYR5JGS736X9XQZ6RZFW583G",
         "parent_id": null,
         "user_id": null
       }
@@ -13147,13 +13147,13 @@
         "event_url": "https://www.espn.com/mlb/game/_/gameId/401816317/red-sox-athletics",
         "event_stream": null,
         "date": "2026-07-30T01:40Z",
-        "kickoff_in": "in 6 hours",
+        "kickoff_in": "in an hour",
         "series_summary": null,
         "venue": "Sutter Health Park",
         "location": "Sacramento, California",
         "tv_network": "MLB.TV/NBC Sports CA/NESN",
         "odds": "BOS -156",
-        "overunder": 10.5,
+        "overunder": 11.0,
         "team_name": "Red Sox",
         "team_long_name": "Boston Red Sox",
         "team_id": "2",
@@ -13207,7 +13207,7 @@
         "opponent_total_shots": null,
         "team_sets_won": null,
         "opponent_sets_won": null,
-        "last_update": "2026-07-29 15:25:18-04:00",
+        "last_update": "2026-07-29 20:05:18-04:00",
         "api_message": null,
         "api_url": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?lang=en&limit=50",
         "private_fast_refresh": false,
@@ -13215,10 +13215,10 @@
         "friendly_name": "team_tracker"
       },
       "last_changed": "2026-07-29T15:05:18.507393+00:00",
-      "last_reported": "2026-07-29T19:25:18.540769+00:00",
-      "last_updated": "2026-07-29T19:25:18.540769+00:00",
+      "last_reported": "2026-07-30T00:05:18.516110+00:00",
+      "last_updated": "2026-07-30T00:05:18.516110+00:00",
       "context": {
-        "id": "01KYQND8TCG2W7QFJRN2TTDCP7",
+        "id": "01KYR5DZ1MRA0DGK7X7F9KC8AN",
         "parent_id": null,
         "user_id": null
       }
@@ -13230,11 +13230,11 @@
         "attribution": "Data provided by Trane Technologies",
         "friendly_name": "Thermostat 1 Blower active"
       },
-      "last_changed": "2026-07-29T19:23:47.074735+00:00",
-      "last_reported": "2026-07-29T19:23:47.074735+00:00",
-      "last_updated": "2026-07-29T19:23:47.074735+00:00",
+      "last_changed": "2026-07-30T00:02:07.996087+00:00",
+      "last_reported": "2026-07-30T00:02:07.996087+00:00",
+      "last_updated": "2026-07-30T00:02:07.996087+00:00",
       "context": {
-        "id": "01KYQNAFG2WP9GNQR1DAS2KCTM",
+        "id": "01KYR584ZWE8V6PV97HY448RP9",
         "parent_id": null,
         "user_id": null
       }
@@ -13294,10 +13294,10 @@
         "supported_features": 411
       },
       "last_changed": "2026-07-24T18:50:45.040881+00:00",
-      "last_reported": "2026-07-29T19:23:47.075067+00:00",
-      "last_updated": "2026-07-29T19:23:47.075067+00:00",
+      "last_reported": "2026-07-30T00:02:07.996407+00:00",
+      "last_updated": "2026-07-30T00:02:07.996407+00:00",
       "context": {
-        "id": "01KYQNAFG3YSHP99797WZPR905",
+        "id": "01KYR584ZWKZYGP8R29GWRAHNS",
         "parent_id": null,
         "user_id": null
       }
@@ -13415,11 +13415,11 @@
         "attribution": "Data provided by Trane Technologies",
         "friendly_name": "Thermostat 1 System status"
       },
-      "last_changed": "2026-07-29T19:23:47.075374+00:00",
-      "last_reported": "2026-07-29T19:23:47.075374+00:00",
-      "last_updated": "2026-07-29T19:23:47.075374+00:00",
+      "last_changed": "2026-07-30T00:02:07.996699+00:00",
+      "last_reported": "2026-07-30T00:02:07.996699+00:00",
+      "last_updated": "2026-07-30T00:02:07.996699+00:00",
       "context": {
-        "id": "01KYQNAFG34B3ACJ6NE37R921P",
+        "id": "01KYR584ZW852DB0BXQVSR5BG4",
         "parent_id": null,
         "user_id": null
       }
@@ -13505,11 +13505,11 @@
         "device_class": "humidity",
         "friendly_name": "Thermostat 1 Humidity"
       },
-      "last_changed": "2026-07-29T18:59:45.959746+00:00",
-      "last_reported": "2026-07-29T18:59:45.959746+00:00",
-      "last_updated": "2026-07-29T18:59:45.959746+00:00",
+      "last_changed": "2026-07-29T23:40:07.955728+00:00",
+      "last_reported": "2026-07-29T23:40:07.955728+00:00",
+      "last_updated": "2026-07-29T23:40:07.955728+00:00",
       "context": {
-        "id": "01KYQKYG57R64EXRY8EK718HA3",
+        "id": "01KYR3ZVWKGJ7WNWDMK40E5ZT5",
         "parent_id": null,
         "user_id": null
       }
@@ -13726,68 +13726,68 @@
     },
     {
       "entity_id": "sensor.elec_account_8715982816_last_changed",
-      "state": "2026-07-28T03:00:00+00:00",
+      "state": "2026-07-29T03:00:00+00:00",
       "attributes": {
         "device_class": "timestamp",
         "friendly_name": "ELEC account 8715982816 Last changed"
       },
-      "last_changed": "2026-07-28T22:08:13.938217+00:00",
-      "last_reported": "2026-07-28T22:08:13.938217+00:00",
-      "last_updated": "2026-07-28T22:08:13.938217+00:00",
+      "last_changed": "2026-07-29T22:08:19.006238+00:00",
+      "last_reported": "2026-07-29T22:08:19.006238+00:00",
+      "last_updated": "2026-07-29T22:08:19.006238+00:00",
       "context": {
-        "id": "01KYNCAW3JH1SY1ARHPP6AD44B",
+        "id": "01KYQYQR1YSDD7GN5W2AT94XRP",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.elec_account_8715982816_last_updated",
-      "state": "2026-07-29T10:08:16+00:00",
+      "state": "2026-07-29T22:08:19+00:00",
       "attributes": {
         "device_class": "timestamp",
         "friendly_name": "ELEC account 8715982816 Last updated"
       },
-      "last_changed": "2026-07-29T10:08:16.344429+00:00",
-      "last_reported": "2026-07-29T10:08:16.344429+00:00",
-      "last_updated": "2026-07-29T10:08:16.344429+00:00",
+      "last_changed": "2026-07-29T22:08:19.006321+00:00",
+      "last_reported": "2026-07-29T22:08:19.006321+00:00",
+      "last_updated": "2026-07-29T22:08:19.006321+00:00",
       "context": {
-        "id": "01KYPNH9YR2VD4VDM2ZZ4J6STH",
+        "id": "01KYQYQR1YDSYNXXJTCSPMZZXE",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.elec_account_8715982816_current_bill_electric_usage_to_date",
-      "state": "107.0",
+      "state": "121.0",
       "attributes": {
         "state_class": "total",
         "unit_of_measurement": "kWh",
         "device_class": "energy",
         "friendly_name": "ELEC account 8715982816 Current bill electric usage to date"
       },
-      "last_changed": "2026-07-27T22:08:11.913055+00:00",
-      "last_reported": "2026-07-27T22:08:11.913055+00:00",
-      "last_updated": "2026-07-27T22:08:11.913055+00:00",
+      "last_changed": "2026-07-29T22:08:19.006372+00:00",
+      "last_reported": "2026-07-29T22:08:19.006372+00:00",
+      "last_updated": "2026-07-29T22:08:19.006372+00:00",
       "context": {
-        "id": "01KYJSY3494NDN2E33BFQGKX5S",
+        "id": "01KYQYQR1YKT395VVBA51ZV0Z7",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.elec_account_8715982816_current_bill_electric_forecasted_usage",
-      "state": "170.0",
+      "state": "143.0",
       "attributes": {
         "state_class": "total",
         "unit_of_measurement": "kWh",
         "device_class": "energy",
         "friendly_name": "ELEC account 8715982816 Current bill electric forecasted usage"
       },
-      "last_changed": "2026-07-28T22:08:13.938380+00:00",
-      "last_reported": "2026-07-28T22:08:13.938380+00:00",
-      "last_updated": "2026-07-28T22:08:13.938380+00:00",
+      "last_changed": "2026-07-29T22:08:19.006405+00:00",
+      "last_reported": "2026-07-29T22:08:19.006405+00:00",
+      "last_updated": "2026-07-29T22:08:19.006405+00:00",
       "context": {
-        "id": "01KYNCAW3JVV1Q9VX05X3F9MT8",
+        "id": "01KYQYQR1Y7N2KV9G7V5N9E0FW",
         "parent_id": null,
         "user_id": null
       }
@@ -13812,36 +13812,36 @@
     },
     {
       "entity_id": "sensor.elec_account_8715982816_current_bill_electric_cost_to_date",
-      "state": "27.0",
+      "state": "30.0",
       "attributes": {
         "state_class": "total",
         "unit_of_measurement": "USD",
         "device_class": "monetary",
         "friendly_name": "ELEC account 8715982816 Current bill electric cost to date"
       },
-      "last_changed": "2026-07-27T22:08:11.914080+00:00",
-      "last_reported": "2026-07-27T22:08:11.914080+00:00",
-      "last_updated": "2026-07-27T22:08:11.914080+00:00",
+      "last_changed": "2026-07-29T22:08:19.006461+00:00",
+      "last_reported": "2026-07-29T22:08:19.006461+00:00",
+      "last_updated": "2026-07-29T22:08:19.006461+00:00",
       "context": {
-        "id": "01KYJSY34A5R9GY9QS4QCXN0WF",
+        "id": "01KYQYQR1YBD2VMYKD202MMEWM",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.elec_account_8715982816_current_bill_electric_forecasted_cost",
-      "state": "46.0",
+      "state": "40.0",
       "attributes": {
         "state_class": "total",
         "unit_of_measurement": "USD",
         "device_class": "monetary",
         "friendly_name": "ELEC account 8715982816 Current bill electric forecasted cost"
       },
-      "last_changed": "2026-07-27T22:08:11.914113+00:00",
-      "last_reported": "2026-07-27T22:08:11.914113+00:00",
-      "last_updated": "2026-07-27T22:08:11.914113+00:00",
+      "last_changed": "2026-07-29T22:08:19.006488+00:00",
+      "last_reported": "2026-07-29T22:08:19.006488+00:00",
+      "last_updated": "2026-07-29T22:08:19.006488+00:00",
       "context": {
-        "id": "01KYJSY34AA33ZM57MZT5F4FPQ",
+        "id": "01KYQYQR1Y6REMXCCBCF51FP27",
         "parent_id": null,
         "user_id": null
       }
@@ -14072,7 +14072,7 @@
         "opponent_total_shots": null,
         "team_sets_won": null,
         "opponent_sets_won": null,
-        "last_update": "2026-07-29 15:27:38-04:00",
+        "last_update": "2026-07-29 20:07:38-04:00",
         "api_message": null,
         "api_url": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?lang=en&limit=50&dates=20260728-20261027",
         "private_fast_refresh": false,
@@ -14080,10 +14080,10 @@
         "friendly_name": "Caps"
       },
       "last_changed": "2026-07-14T22:07:31.153037+00:00",
-      "last_reported": "2026-07-29T19:27:38.743277+00:00",
-      "last_updated": "2026-07-29T19:27:38.743277+00:00",
+      "last_reported": "2026-07-30T00:07:38.706999+00:00",
+      "last_updated": "2026-07-30T00:07:38.706999+00:00",
       "context": {
-        "id": "01KYQNHHQQF5AKZFMM50EQD1WQ",
+        "id": "01KYR5J7YJ3ZBNZM0X57WXT9CF",
         "parent_id": null,
         "user_id": null
       }
@@ -14134,7 +14134,7 @@
     },
     {
       "entity_id": "calendar.andy_s_work_calendar",
-      "state": "off",
+      "state": "on",
       "attributes": {
         "message": "Andy Work",
         "all_day": false,
@@ -14144,11 +14144,11 @@
         "description": "",
         "friendly_name": "Andy's Work Calendar"
       },
-      "last_changed": "2026-07-26T23:00:00.000946+00:00",
-      "last_reported": "2026-07-26T23:00:00.000946+00:00",
-      "last_updated": "2026-07-26T23:00:00.000946+00:00",
+      "last_changed": "2026-07-29T20:00:00.000899+00:00",
+      "last_reported": "2026-07-29T20:00:00.000899+00:00",
+      "last_updated": "2026-07-29T20:00:00.000899+00:00",
       "context": {
-        "id": "01KYGAG7C02PY5HEMAM93NJF8Q",
+        "id": "01KYQQCSG0521ZSRAS1SCYJ7PG",
         "parent_id": null,
         "user_id": null
       }
@@ -14431,16 +14431,16 @@
       "state": "on",
       "attributes": {
         "id": "6a7706f3f21a4b7e96c540b45d92f2f6",
-        "last_triggered": "2026-07-29T19:25:00.059594+00:00",
+        "last_triggered": "2026-07-30T00:10:00.059575+00:00",
         "mode": "single",
         "current": 0,
         "friendly_name": "PVOutput Upload"
       },
       "last_changed": "2026-07-14T22:07:36.330420+00:00",
-      "last_reported": "2026-07-29T19:25:00.198355+00:00",
-      "last_updated": "2026-07-29T19:25:00.198355+00:00",
+      "last_reported": "2026-07-30T00:10:00.349175+00:00",
+      "last_updated": "2026-07-30T00:10:00.349175+00:00",
       "context": {
-        "id": "01KYQNCPRVZATSN7FAK4VAST73",
+        "id": "01KYR5PHZVYEQD0SE04W4BQV9V",
         "parent_id": null,
         "user_id": null
       }
@@ -14486,20 +14486,20 @@
     },
     {
       "entity_id": "sensor.summer_cloud_relative_pressure",
-      "state": "29.915",
+      "state": "29.965",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:08.670000-04:00",
+        "last_measured": "2026-07-29T20:05:08.634000-04:00",
         "unit_of_measurement": "inHg",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "pressure",
         "friendly_name": "Summer Cloud Relative pressure"
       },
-      "last_changed": "2026-07-29T19:24:32.442226+00:00",
-      "last_reported": "2026-07-29T19:24:32.442226+00:00",
-      "last_updated": "2026-07-29T19:24:32.442226+00:00",
+      "last_changed": "2026-07-30T00:05:28.446096+00:00",
+      "last_reported": "2026-07-30T00:05:28.446096+00:00",
+      "last_updated": "2026-07-30T00:05:28.446096+00:00",
       "context": {
-        "id": "01KYQNBVST31DE1472BG7G6X98",
+        "id": "01KYR5E8QYKXPZ8FKD2HQ8V57H",
         "parent_id": null,
         "user_id": null
       }
@@ -14509,57 +14509,57 @@
       "state": "0",
       "attributes": {
         "state_class": "total_increasing",
-        "last_measured": "2026-07-29T15:24:08.670000-04:00",
+        "last_measured": "2026-07-29T20:05:08.634000-04:00",
         "unit_of_measurement": "in",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "precipitation",
         "friendly_name": "Summer Cloud Daily rain"
       },
       "last_changed": "2026-07-29T04:06:28.430127+00:00",
-      "last_reported": "2026-07-29T19:24:32.442355+00:00",
-      "last_updated": "2026-07-29T19:24:32.442355+00:00",
+      "last_reported": "2026-07-30T00:05:28.446220+00:00",
+      "last_updated": "2026-07-30T00:05:28.446220+00:00",
       "context": {
-        "id": "01KYQNBVSTFQK9E66VEHSS9WCS",
+        "id": "01KYR5E8QYVTFNTEHZ50KQBFBY",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.summer_cloud_dew_point",
-      "state": "67.4757640761732",
+      "state": "66.400732833804",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:08.670000-04:00",
+        "last_measured": "2026-07-29T20:05:08.634000-04:00",
         "unit_of_measurement": "\u00b0F",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "temperature",
         "friendly_name": "Summer Cloud Dew point"
       },
-      "last_changed": "2026-07-29T19:24:32.442422+00:00",
-      "last_reported": "2026-07-29T19:24:32.442422+00:00",
-      "last_updated": "2026-07-29T19:24:32.442422+00:00",
+      "last_changed": "2026-07-30T00:00:27.458739+00:00",
+      "last_reported": "2026-07-30T00:05:28.446287+00:00",
+      "last_updated": "2026-07-30T00:05:28.446287+00:00",
       "context": {
-        "id": "01KYQNBVST24PDRRFZ8GDNVENF",
+        "id": "01KYR5E8QY1YPDTK0NY2WE0XD2",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.summer_cloud_feels_like",
-      "state": "83.9383114652001",
+      "state": "76.794",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:08.670000-04:00",
+        "last_measured": "2026-07-29T20:05:08.634000-04:00",
         "unit_of_measurement": "\u00b0F",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "temperature",
         "friendly_name": "Summer Cloud Feels like"
       },
-      "last_changed": "2026-07-29T19:24:32.442476+00:00",
-      "last_reported": "2026-07-29T19:24:32.442476+00:00",
-      "last_updated": "2026-07-29T19:24:32.442476+00:00",
+      "last_changed": "2026-07-30T00:00:27.458792+00:00",
+      "last_reported": "2026-07-30T00:05:28.446337+00:00",
+      "last_updated": "2026-07-30T00:05:28.446337+00:00",
       "context": {
-        "id": "01KYQNBVSTPAD0K8DPKWDVS241",
+        "id": "01KYR5E8QYBYH7WSNAX63N0CAP",
         "parent_id": null,
         "user_id": null
       }
@@ -14569,37 +14569,37 @@
       "state": "0",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:08.670000-04:00",
+        "last_measured": "2026-07-29T20:05:08.634000-04:00",
         "unit_of_measurement": "in/h",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "precipitation_intensity",
         "friendly_name": "Summer Cloud Hourly rain"
       },
       "last_changed": "2026-07-28T22:45:24.436034+00:00",
-      "last_reported": "2026-07-29T19:24:32.442527+00:00",
-      "last_updated": "2026-07-29T19:24:32.442527+00:00",
+      "last_reported": "2026-07-30T00:05:28.446385+00:00",
+      "last_updated": "2026-07-30T00:05:28.446385+00:00",
       "context": {
-        "id": "01KYQNBVSTMDTHKKMZRNQHA5J7",
+        "id": "01KYR5E8QYNAK7T74AGNMRH46E",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.summer_cloud_humidity",
-      "state": "63",
+      "state": "72",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:08.670000-04:00",
+        "last_measured": "2026-07-29T20:05:08.634000-04:00",
         "unit_of_measurement": "%",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "humidity",
         "friendly_name": "Summer Cloud Humidity"
       },
-      "last_changed": "2026-07-29T19:24:32.442575+00:00",
-      "last_reported": "2026-07-29T19:24:32.442575+00:00",
-      "last_updated": "2026-07-29T19:24:32.442575+00:00",
+      "last_changed": "2026-07-29T23:35:22.465592+00:00",
+      "last_reported": "2026-07-30T00:05:28.446431+00:00",
+      "last_updated": "2026-07-30T00:05:28.446431+00:00",
       "context": {
-        "id": "01KYQNBVST4Z8GH6DRDTRWYWD4",
+        "id": "01KYR5E8QYYAPRXN68W4GB9GYD",
         "parent_id": null,
         "user_id": null
       }
@@ -14609,203 +14609,203 @@
       "state": "19.5",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:08.670000-04:00",
+        "last_measured": "2026-07-29T20:05:08.634000-04:00",
         "unit_of_measurement": "mph",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "wind_speed",
         "friendly_name": "Summer Cloud Max daily gust"
       },
       "last_changed": "2026-07-29T18:59:27.456578+00:00",
-      "last_reported": "2026-07-29T19:24:32.442625+00:00",
-      "last_updated": "2026-07-29T19:24:32.442625+00:00",
+      "last_reported": "2026-07-30T00:05:28.446484+00:00",
+      "last_updated": "2026-07-30T00:05:28.446484+00:00",
       "context": {
-        "id": "01KYQNBVSTR4VQE2THZGSFEPC9",
+        "id": "01KYR5E8QY5F95XGBPHXYRCEY7",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.summer_cloud_temperature",
-      "state": "81.3",
+      "state": "76.1",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:08.670000-04:00",
+        "last_measured": "2026-07-29T20:05:08.634000-04:00",
         "unit_of_measurement": "\u00b0F",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "temperature",
         "friendly_name": "Summer Cloud Temperature"
       },
-      "last_changed": "2026-07-29T19:24:32.442671+00:00",
-      "last_reported": "2026-07-29T19:24:32.442671+00:00",
-      "last_updated": "2026-07-29T19:24:32.442671+00:00",
+      "last_changed": "2026-07-30T00:00:27.458987+00:00",
+      "last_reported": "2026-07-30T00:05:28.446532+00:00",
+      "last_updated": "2026-07-30T00:05:28.446532+00:00",
       "context": {
-        "id": "01KYQNBVSTP1935SPFVNATQW3B",
+        "id": "01KYR5E8QYX2Y88JBJGFHST367",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.summer_cloud_uv_index",
-      "state": "8",
+      "state": "0",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:08.670000-04:00",
+        "last_measured": "2026-07-29T20:05:08.634000-04:00",
         "unit_of_measurement": "index",
         "attribution": "Data provided by ambientnetwork.net",
         "friendly_name": "Summer Cloud UV index"
       },
-      "last_changed": "2026-07-29T19:24:32.442717+00:00",
-      "last_reported": "2026-07-29T19:24:32.442717+00:00",
-      "last_updated": "2026-07-29T19:24:32.442717+00:00",
+      "last_changed": "2026-07-29T22:20:07.452369+00:00",
+      "last_reported": "2026-07-30T00:05:28.446576+00:00",
+      "last_updated": "2026-07-30T00:05:28.446576+00:00",
       "context": {
-        "id": "01KYQNBVSTV1A5QV4NW3KEVQ80",
+        "id": "01KYR5E8QY7WW86EGX8KE5J5Z8",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.summer_cloud_wind_gust",
-      "state": "11.4",
+      "state": "3.4",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:08.670000-04:00",
+        "last_measured": "2026-07-29T20:05:08.634000-04:00",
         "unit_of_measurement": "mph",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "wind_speed",
         "friendly_name": "Summer Cloud Wind gust"
       },
-      "last_changed": "2026-07-29T19:24:32.442765+00:00",
-      "last_reported": "2026-07-29T19:24:32.442765+00:00",
-      "last_updated": "2026-07-29T19:24:32.442765+00:00",
+      "last_changed": "2026-07-30T00:05:28.446622+00:00",
+      "last_reported": "2026-07-30T00:05:28.446622+00:00",
+      "last_updated": "2026-07-30T00:05:28.446622+00:00",
       "context": {
-        "id": "01KYQNBVSTQMRR1D4AG0G810DD",
+        "id": "01KYR5E8QYMN1MGC4HPKC09J46",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.summer_cloud_wind_speed",
-      "state": "8.5",
+      "state": "2.5",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:08.670000-04:00",
+        "last_measured": "2026-07-29T20:05:08.634000-04:00",
         "unit_of_measurement": "mph",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "wind_speed",
         "friendly_name": "Summer Cloud Wind speed"
       },
-      "last_changed": "2026-07-29T19:24:32.442810+00:00",
-      "last_reported": "2026-07-29T19:24:32.442810+00:00",
-      "last_updated": "2026-07-29T19:24:32.442810+00:00",
+      "last_changed": "2026-07-30T00:05:28.446670+00:00",
+      "last_reported": "2026-07-30T00:05:28.446670+00:00",
+      "last_updated": "2026-07-30T00:05:28.446670+00:00",
       "context": {
-        "id": "01KYQNBVSTTJRDSKZDMYHV4SZM",
+        "id": "01KYR5E8QY5Q5RJF5GN9011104",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.envoy_482539015436_current_power_production",
-      "state": "4238",
+      "state": "0",
       "attributes": {
         "state_class": "measurement",
         "unit_of_measurement": "W",
         "device_class": "power",
         "friendly_name": "Envoy 482539015436 Current power production"
       },
-      "last_changed": "2026-07-29T19:26:54.412751+00:00",
-      "last_reported": "2026-07-29T19:26:54.412751+00:00",
-      "last_updated": "2026-07-29T19:26:54.412751+00:00",
+      "last_changed": "2026-07-30T00:05:27.260607+00:00",
+      "last_reported": "2026-07-30T00:05:27.260607+00:00",
+      "last_updated": "2026-07-30T00:05:27.260607+00:00",
       "context": {
-        "id": "01KYQNG6EC506ZV7Z9MJD84563",
+        "id": "01KYR5E7JWEPC3KXQ1S3H4A1KV",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.envoy_482539015436_energy_production_today",
-      "state": "22922",
+      "state": "26485",
       "attributes": {
         "state_class": "total_increasing",
         "unit_of_measurement": "Wh",
         "device_class": "energy",
         "friendly_name": "Envoy 482539015436 Energy production today"
       },
-      "last_changed": "2026-07-29T19:26:54.428225+00:00",
-      "last_reported": "2026-07-29T19:26:54.428225+00:00",
-      "last_updated": "2026-07-29T19:26:54.428225+00:00",
+      "last_changed": "2026-07-29T23:44:21.462612+00:00",
+      "last_reported": "2026-07-29T23:44:21.462612+00:00",
+      "last_updated": "2026-07-29T23:44:21.462612+00:00",
       "context": {
-        "id": "01KYQNG6EWQ7RV5ZZE9T3J2HTB",
+        "id": "01KYR47KEPA5RN5FCJETPW1XDD",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.envoy_482539015436_energy_production_last_seven_days",
-      "state": "212.257",
+      "state": "211.5",
       "attributes": {
         "unit_of_measurement": "kWh",
         "device_class": "energy",
         "friendly_name": "Envoy 482539015436 Energy production last seven days"
       },
-      "last_changed": "2026-07-29T19:26:54.428281+00:00",
-      "last_reported": "2026-07-29T19:26:54.428281+00:00",
-      "last_updated": "2026-07-29T19:26:54.428281+00:00",
+      "last_changed": "2026-07-29T23:46:28.361478+00:00",
+      "last_reported": "2026-07-29T23:46:28.361478+00:00",
+      "last_updated": "2026-07-29T23:46:28.361478+00:00",
       "context": {
-        "id": "01KYQNG6EWMJ88JDCRMNN6BC7Q",
+        "id": "01KYR4BFC9XB7YEHSVGKNP6GWA",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.envoy_482539015436_lifetime_energy_production",
-      "state": "3.75829",
+      "state": "3.761853",
       "attributes": {
         "state_class": "total_increasing",
         "unit_of_measurement": "MWh",
         "device_class": "energy",
         "friendly_name": "Envoy 482539015436 Lifetime energy production"
       },
-      "last_changed": "2026-07-29T19:26:54.428319+00:00",
-      "last_reported": "2026-07-29T19:26:54.428319+00:00",
-      "last_updated": "2026-07-29T19:26:54.428319+00:00",
+      "last_changed": "2026-07-29T23:44:21.462718+00:00",
+      "last_reported": "2026-07-29T23:44:21.462718+00:00",
+      "last_updated": "2026-07-29T23:44:21.462718+00:00",
       "context": {
-        "id": "01KYQNG6EW11Y4RJEVSPS5QDVY",
+        "id": "01KYR47KEP3C0QJ8KAH8Z1AVKC",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.envoy_482539015436_current_power_consumption",
-      "state": "2449",
+      "state": "851",
       "attributes": {
         "state_class": "measurement",
         "unit_of_measurement": "W",
         "device_class": "power",
         "friendly_name": "Envoy 482539015436 Current power consumption"
       },
-      "last_changed": "2026-07-29T19:26:54.429022+00:00",
-      "last_reported": "2026-07-29T19:26:54.429022+00:00",
-      "last_updated": "2026-07-29T19:26:54.429022+00:00",
+      "last_changed": "2026-07-30T00:09:38.752447+00:00",
+      "last_reported": "2026-07-30T00:09:38.752447+00:00",
+      "last_updated": "2026-07-30T00:09:38.752447+00:00",
       "context": {
-        "id": "01KYQNG6EX19628KZ09FYP9F19",
+        "id": "01KYR5NX60HNDXJWJ0867SQXD6",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.envoy_482539015436_energy_consumption_today",
-      "state": "12966",
+      "state": "20079",
       "attributes": {
         "state_class": "total_increasing",
         "unit_of_measurement": "Wh",
         "device_class": "energy",
         "friendly_name": "Envoy 482539015436 Energy consumption today"
       },
-      "last_changed": "2026-07-29T19:16:19.355079+00:00",
-      "last_reported": "2026-07-29T19:16:19.355079+00:00",
-      "last_updated": "2026-07-29T19:16:19.355079+00:00",
+      "last_changed": "2026-07-30T00:01:14.572914+00:00",
+      "last_reported": "2026-07-30T00:01:14.572914+00:00",
+      "last_updated": "2026-07-30T00:01:14.572914+00:00",
       "context": {
-        "id": "01KYQMWT8V1WEMPTE7ARFVV12K",
+        "id": "01KYR56GTCQJ244BFDM2V08J3G",
         "parent_id": null,
         "user_id": null
       }
@@ -14829,144 +14829,144 @@
     },
     {
       "entity_id": "sensor.envoy_482539015436_lifetime_energy_consumption",
-      "state": "4.701524",
+      "state": "4.70869",
       "attributes": {
         "state_class": "total_increasing",
         "unit_of_measurement": "MWh",
         "device_class": "energy",
         "friendly_name": "Envoy 482539015436 Lifetime energy consumption"
       },
-      "last_changed": "2026-07-29T19:26:54.429113+00:00",
-      "last_reported": "2026-07-29T19:26:54.429113+00:00",
-      "last_updated": "2026-07-29T19:26:54.429113+00:00",
+      "last_changed": "2026-07-30T00:09:38.752594+00:00",
+      "last_reported": "2026-07-30T00:09:38.752594+00:00",
+      "last_updated": "2026-07-30T00:09:38.752594+00:00",
       "context": {
-        "id": "01KYQNG6EXX05Q5B3ZRZTQ58PS",
+        "id": "01KYR5NX60B9KBQWQTC5198H40",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.envoy_482539015436_lifetime_net_energy_consumption",
-      "state": "6.844576",
+      "state": "6.849018",
       "attributes": {
         "state_class": "total_increasing",
         "unit_of_measurement": "MWh",
         "device_class": "energy",
         "friendly_name": "Envoy 482539015436 Lifetime net energy consumption"
       },
-      "last_changed": "2026-07-29T19:11:03.721869+00:00",
-      "last_reported": "2026-07-29T19:11:03.721869+00:00",
-      "last_updated": "2026-07-29T19:11:03.721869+00:00",
+      "last_changed": "2026-07-30T00:09:38.752651+00:00",
+      "last_reported": "2026-07-30T00:09:38.752651+00:00",
+      "last_updated": "2026-07-30T00:09:38.752651+00:00",
       "context": {
-        "id": "01KYQMK619S0WJ37FB1211QQFB",
+        "id": "01KYR5NX60DAAC1YFWKDDCDYJ6",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.envoy_482539015436_production_ct_energy_delivered",
-      "state": "3.758288",
+      "state": "3.761853",
       "attributes": {
         "state_class": "total_increasing",
         "unit_of_measurement": "MWh",
         "device_class": "energy",
         "friendly_name": "Envoy 482539015436 Production CT energy delivered"
       },
-      "last_changed": "2026-07-29T19:26:54.429181+00:00",
-      "last_reported": "2026-07-29T19:26:54.429181+00:00",
-      "last_updated": "2026-07-29T19:26:54.429181+00:00",
+      "last_changed": "2026-07-29T23:44:21.463475+00:00",
+      "last_reported": "2026-07-29T23:44:21.463475+00:00",
+      "last_updated": "2026-07-29T23:44:21.463475+00:00",
       "context": {
-        "id": "01KYQNG6EXBYFW70K5T23RHFSX",
+        "id": "01KYR47KEQY4A8V73T4E13EHZP",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.envoy_482539015436_lifetime_net_energy_production",
-      "state": "2.179854",
+      "state": "2.180694",
       "attributes": {
         "state_class": "total_increasing",
         "unit_of_measurement": "MWh",
         "device_class": "energy",
         "friendly_name": "Envoy 482539015436 Lifetime net energy production"
       },
-      "last_changed": "2026-07-29T19:26:54.429211+00:00",
-      "last_reported": "2026-07-29T19:26:54.429211+00:00",
-      "last_updated": "2026-07-29T19:26:54.429211+00:00",
+      "last_changed": "2026-07-29T21:24:50.436004+00:00",
+      "last_reported": "2026-07-29T21:24:50.436004+00:00",
+      "last_updated": "2026-07-29T21:24:50.436004+00:00",
       "context": {
-        "id": "01KYQNG6EX4AG1125068FPBXQG",
+        "id": "01KYQW84M4PMD6P3CXGA9AQM56",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.envoy_482539015436_production_ct_energy_received",
-      "state": "0.000439",
+      "state": "0.000441",
       "attributes": {
         "state_class": "total_increasing",
         "unit_of_measurement": "MWh",
         "device_class": "energy",
         "friendly_name": "Envoy 482539015436 Production CT energy received"
       },
-      "last_changed": "2026-07-29T03:06:34.655169+00:00",
-      "last_reported": "2026-07-29T03:06:34.655169+00:00",
-      "last_updated": "2026-07-29T03:06:34.655169+00:00",
+      "last_changed": "2026-07-29T23:59:08.329565+00:00",
+      "last_reported": "2026-07-29T23:59:08.329565+00:00",
+      "last_updated": "2026-07-29T23:59:08.329565+00:00",
       "context": {
-        "id": "01KYNXD58Z6KQTPJVBWHKMB5KY",
+        "id": "01KYR52NH9X5RKHSV5YTGP21J9",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.envoy_482539015436_current_net_power_consumption",
-      "state": "-1779",
+      "state": "852",
       "attributes": {
         "state_class": "measurement",
         "unit_of_measurement": "W",
         "device_class": "power",
         "friendly_name": "Envoy 482539015436 Current net power consumption"
       },
-      "last_changed": "2026-07-29T19:26:54.429355+00:00",
-      "last_reported": "2026-07-29T19:26:54.429355+00:00",
-      "last_updated": "2026-07-29T19:26:54.429355+00:00",
+      "last_changed": "2026-07-30T00:09:38.752962+00:00",
+      "last_reported": "2026-07-30T00:09:38.752962+00:00",
+      "last_updated": "2026-07-30T00:09:38.752962+00:00",
       "context": {
-        "id": "01KYQNG6EXATK3J2RDKC97XE0E",
+        "id": "01KYR5NX60YTP66PHTD1ZVN1PX",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.envoy_482539015436_production_ct_power",
-      "state": "4.232",
+      "state": "0.0",
       "attributes": {
         "state_class": "measurement",
         "unit_of_measurement": "kW",
         "device_class": "power",
         "friendly_name": "Envoy 482539015436 Production CT power"
       },
-      "last_changed": "2026-07-29T19:26:54.429384+00:00",
-      "last_reported": "2026-07-29T19:26:54.429384+00:00",
-      "last_updated": "2026-07-29T19:26:54.429384+00:00",
+      "last_changed": "2026-07-30T00:05:27.261610+00:00",
+      "last_reported": "2026-07-30T00:05:27.261610+00:00",
+      "last_updated": "2026-07-30T00:05:27.261610+00:00",
       "context": {
-        "id": "01KYQNG6EX8G8FN50FVF6MSWEA",
+        "id": "01KYR5E7JXQTPF3T49KDD01H14",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.envoy_482539015436_net_consumption_ct_current",
-      "state": "16.838",
+      "state": "8.205",
       "attributes": {
         "state_class": "measurement",
         "unit_of_measurement": "A",
         "device_class": "current",
         "friendly_name": "Envoy 482539015436 Net consumption CT current"
       },
-      "last_changed": "2026-07-29T19:26:54.429415+00:00",
-      "last_reported": "2026-07-29T19:26:54.429415+00:00",
-      "last_updated": "2026-07-29T19:26:54.429415+00:00",
+      "last_changed": "2026-07-30T00:09:38.753037+00:00",
+      "last_reported": "2026-07-30T00:09:38.753037+00:00",
+      "last_updated": "2026-07-30T00:09:38.753037+00:00",
       "context": {
-        "id": "01KYQNG6EXEBTMMXNKH0C4WZBY",
+        "id": "01KYR5NX61PD701FAN42DNN1K8",
         "parent_id": null,
         "user_id": null
       }
@@ -14994,56 +14994,56 @@
     },
     {
       "entity_id": "sensor.inverter_532535015256",
-      "state": "236",
+      "state": "0",
       "attributes": {
         "state_class": "measurement",
         "unit_of_measurement": "W",
         "device_class": "power",
         "friendly_name": "Inverter 532535015256"
       },
-      "last_changed": "2026-07-29T19:22:43.901025+00:00",
-      "last_reported": "2026-07-29T19:22:43.901025+00:00",
-      "last_updated": "2026-07-29T19:22:43.901025+00:00",
+      "last_changed": "2026-07-30T00:09:38.753125+00:00",
+      "last_reported": "2026-07-30T00:09:38.753125+00:00",
+      "last_updated": "2026-07-30T00:09:38.753125+00:00",
       "context": {
-        "id": "01KYQN8HSXF1YHXQ8QZ3B0PJ4R",
+        "id": "01KYR5NX615ENVZ4FZ8ZX502F9",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.inverter_532535015256_energy_production_today",
-      "state": "1794",
+      "state": "2032",
       "attributes": {
         "state_class": "total_increasing",
         "unit_of_measurement": "Wh",
         "device_class": "energy",
         "friendly_name": "Inverter 532535015256 Energy production today"
       },
-      "last_changed": "2026-07-29T19:22:43.901054+00:00",
-      "last_reported": "2026-07-29T19:22:43.901054+00:00",
-      "last_updated": "2026-07-29T19:22:43.901054+00:00",
+      "last_changed": "2026-07-29T23:54:54.277511+00:00",
+      "last_reported": "2026-07-29T23:54:54.277511+00:00",
+      "last_updated": "2026-07-29T23:54:54.277511+00:00",
       "context": {
-        "id": "01KYQN8HSXKH57R1RMK6H05VKM",
+        "id": "01KYR4TXE578T8QCFWDSE24P10",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.sealightlane_relative_pressure",
-      "state": "29.855",
+      "state": "29.905",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:22.461000-04:00",
+        "last_measured": "2026-07-29T20:05:23.701000-04:00",
         "unit_of_measurement": "inHg",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "pressure",
         "friendly_name": "SeaLightLane Relative pressure"
       },
-      "last_changed": "2026-07-29T19:24:53.762432+00:00",
-      "last_reported": "2026-07-29T19:24:53.762432+00:00",
-      "last_updated": "2026-07-29T19:24:53.762432+00:00",
+      "last_changed": "2026-07-30T00:05:49.817710+00:00",
+      "last_reported": "2026-07-30T00:05:49.817710+00:00",
+      "last_updated": "2026-07-30T00:05:49.817710+00:00",
       "context": {
-        "id": "01KYQNCGM2A7GMCGK3AK7B68QJ",
+        "id": "01KYR5EXKS1Q4HVBBE6ZY462EB",
         "parent_id": null,
         "user_id": null
       }
@@ -15053,57 +15053,57 @@
       "state": "0",
       "attributes": {
         "state_class": "total_increasing",
-        "last_measured": "2026-07-29T15:24:22.461000-04:00",
+        "last_measured": "2026-07-29T20:05:23.701000-04:00",
         "unit_of_measurement": "in",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "precipitation",
         "friendly_name": "SeaLightLane Daily rain"
       },
       "last_changed": "2026-07-29T04:01:47.779969+00:00",
-      "last_reported": "2026-07-29T19:24:53.762555+00:00",
-      "last_updated": "2026-07-29T19:24:53.762555+00:00",
+      "last_reported": "2026-07-30T00:05:49.817834+00:00",
+      "last_updated": "2026-07-30T00:05:49.817834+00:00",
       "context": {
-        "id": "01KYQNCGM2Z96BXAD6TM621N9D",
+        "id": "01KYR5EXKSCA3KYVR4GYYJ5GCC",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.sealightlane_dew_point",
-      "state": "68.2345734870922",
+      "state": "65.7428390230614",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:22.461000-04:00",
+        "last_measured": "2026-07-29T20:05:23.701000-04:00",
         "unit_of_measurement": "\u00b0F",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "temperature",
         "friendly_name": "SeaLightLane Dew point"
       },
-      "last_changed": "2026-07-29T19:24:53.762619+00:00",
-      "last_reported": "2026-07-29T19:24:53.762619+00:00",
-      "last_updated": "2026-07-29T19:24:53.762619+00:00",
+      "last_changed": "2026-07-30T00:05:49.817901+00:00",
+      "last_reported": "2026-07-30T00:05:49.817901+00:00",
+      "last_updated": "2026-07-30T00:05:49.817901+00:00",
       "context": {
-        "id": "01KYQNCGM210S8F0YDPB0BET7W",
+        "id": "01KYR5EXKSNS3P3A8VM26BMXJ5",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.sealightlane_feels_like",
-      "state": "85.7309187664001",
+      "state": "75.631",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:22.461000-04:00",
+        "last_measured": "2026-07-29T20:05:23.701000-04:00",
         "unit_of_measurement": "\u00b0F",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "temperature",
         "friendly_name": "SeaLightLane Feels like"
       },
-      "last_changed": "2026-07-29T19:24:53.762672+00:00",
-      "last_reported": "2026-07-29T19:24:53.762672+00:00",
-      "last_updated": "2026-07-29T19:24:53.762672+00:00",
+      "last_changed": "2026-07-30T00:05:49.817955+00:00",
+      "last_reported": "2026-07-30T00:05:49.817955+00:00",
+      "last_updated": "2026-07-30T00:05:49.817955+00:00",
       "context": {
-        "id": "01KYQNCGM2VC2S1F6B7KZFQB7X",
+        "id": "01KYR5EXKSZWQ4JZ7N5709E8M0",
         "parent_id": null,
         "user_id": null
       }
@@ -15113,37 +15113,37 @@
       "state": "0",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:22.461000-04:00",
+        "last_measured": "2026-07-29T20:05:23.701000-04:00",
         "unit_of_measurement": "in/h",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "precipitation_intensity",
         "friendly_name": "SeaLightLane Hourly rain"
       },
       "last_changed": "2026-07-28T22:40:43.775902+00:00",
-      "last_reported": "2026-07-29T19:24:53.762722+00:00",
-      "last_updated": "2026-07-29T19:24:53.762722+00:00",
+      "last_reported": "2026-07-30T00:05:49.818004+00:00",
+      "last_updated": "2026-07-30T00:05:49.818004+00:00",
       "context": {
-        "id": "01KYQNCGM27C0BA0ZAWTW73ZMT",
+        "id": "01KYR5EXKTH2NK1S6X0BXDK5H6",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.sealightlane_humidity",
-      "state": "62",
+      "state": "73",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:22.461000-04:00",
+        "last_measured": "2026-07-29T20:05:23.701000-04:00",
         "unit_of_measurement": "%",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "humidity",
         "friendly_name": "SeaLightLane Humidity"
       },
-      "last_changed": "2026-07-29T19:24:53.762771+00:00",
-      "last_reported": "2026-07-29T19:24:53.762771+00:00",
-      "last_updated": "2026-07-29T19:24:53.762771+00:00",
+      "last_changed": "2026-07-30T00:05:49.818054+00:00",
+      "last_reported": "2026-07-30T00:05:49.818054+00:00",
+      "last_updated": "2026-07-30T00:05:49.818054+00:00",
       "context": {
-        "id": "01KYQNCGM2V97KDHBMKJ5F9KTD",
+        "id": "01KYR5EXKT0WKW91R55TWKAMX3",
         "parent_id": null,
         "user_id": null
       }
@@ -15153,56 +15153,56 @@
       "state": "9.17",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:22.461000-04:00",
+        "last_measured": "2026-07-29T20:05:23.701000-04:00",
         "unit_of_measurement": "mph",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "wind_speed",
         "friendly_name": "SeaLightLane Max daily gust"
       },
       "last_changed": "2026-07-29T17:54:34.777446+00:00",
-      "last_reported": "2026-07-29T19:24:53.762821+00:00",
-      "last_updated": "2026-07-29T19:24:53.762821+00:00",
+      "last_reported": "2026-07-30T00:05:49.818103+00:00",
+      "last_updated": "2026-07-30T00:05:49.818103+00:00",
       "context": {
-        "id": "01KYQNCGM2JFZ2Y8C399GQSW1Q",
+        "id": "01KYR5EXKTE6KT8D7EN99CMGQ5",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.sealightlane_temperature",
-      "state": "82.6",
+      "state": "75",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:22.461000-04:00",
+        "last_measured": "2026-07-29T20:05:23.701000-04:00",
         "unit_of_measurement": "\u00b0F",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "temperature",
         "friendly_name": "SeaLightLane Temperature"
       },
-      "last_changed": "2026-07-29T19:24:53.762867+00:00",
-      "last_reported": "2026-07-29T19:24:53.762867+00:00",
-      "last_updated": "2026-07-29T19:24:53.762867+00:00",
+      "last_changed": "2026-07-30T00:05:49.818148+00:00",
+      "last_reported": "2026-07-30T00:05:49.818148+00:00",
+      "last_updated": "2026-07-30T00:05:49.818148+00:00",
       "context": {
-        "id": "01KYQNCGM2N7JAW1W6MH2J2SH7",
+        "id": "01KYR5EXKTDQDWD96T0K532CEC",
         "parent_id": null,
         "user_id": null
       }
     },
     {
       "entity_id": "sensor.sealightlane_uv_index",
-      "state": "7",
+      "state": "0",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:22.461000-04:00",
+        "last_measured": "2026-07-29T20:05:23.701000-04:00",
         "unit_of_measurement": "index",
         "attribution": "Data provided by ambientnetwork.net",
         "friendly_name": "SeaLightLane UV index"
       },
-      "last_changed": "2026-07-29T19:19:52.778228+00:00",
-      "last_reported": "2026-07-29T19:24:53.762911+00:00",
-      "last_updated": "2026-07-29T19:24:53.762911+00:00",
+      "last_changed": "2026-07-29T22:15:27.783863+00:00",
+      "last_reported": "2026-07-30T00:05:49.818192+00:00",
+      "last_updated": "2026-07-30T00:05:49.818192+00:00",
       "context": {
-        "id": "01KYQNCGM2VKVBX62HBAZMVCNB",
+        "id": "01KYR5EXKTZJRAN4H9JYATYYXW",
         "parent_id": null,
         "user_id": null
       }
@@ -15212,17 +15212,17 @@
       "state": "2.24",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:22.461000-04:00",
+        "last_measured": "2026-07-29T20:05:23.701000-04:00",
         "unit_of_measurement": "mph",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "wind_speed",
         "friendly_name": "SeaLightLane Wind gust"
       },
-      "last_changed": "2026-07-29T19:24:53.762957+00:00",
-      "last_reported": "2026-07-29T19:24:53.762957+00:00",
-      "last_updated": "2026-07-29T19:24:53.762957+00:00",
+      "last_changed": "2026-07-30T00:05:49.818239+00:00",
+      "last_reported": "2026-07-30T00:05:49.818239+00:00",
+      "last_updated": "2026-07-30T00:05:49.818239+00:00",
       "context": {
-        "id": "01KYQNCGM2KBRP93VHTN5TGFRZ",
+        "id": "01KYR5EXKTT4XKFPSFA0PXVPCF",
         "parent_id": null,
         "user_id": null
       }
@@ -15232,17 +15232,17 @@
       "state": "0.89",
       "attributes": {
         "state_class": "measurement",
-        "last_measured": "2026-07-29T15:24:22.461000-04:00",
+        "last_measured": "2026-07-29T20:05:23.701000-04:00",
         "unit_of_measurement": "mph",
         "attribution": "Data provided by ambientnetwork.net",
         "device_class": "wind_speed",
         "friendly_name": "SeaLightLane Wind speed"
       },
-      "last_changed": "2026-07-29T19:24:53.763001+00:00",
-      "last_reported": "2026-07-29T19:24:53.763001+00:00",
-      "last_updated": "2026-07-29T19:24:53.763001+00:00",
+      "last_changed": "2026-07-30T00:05:49.818284+00:00",
+      "last_reported": "2026-07-30T00:05:49.818284+00:00",
+      "last_updated": "2026-07-30T00:05:49.818284+00:00",
       "context": {
-        "id": "01KYQNCGM32P3D7PV1ZV40SKPE",
+        "id": "01KYR5EXKTB0RH4YPDA0S3FF3V",
         "parent_id": null,
         "user_id": null
       }
@@ -16973,17 +16973,17 @@
       "entity_id": "image.3dee_current_print_preview",
       "state": "unknown",
       "attributes": {
-        "access_token": "48327f908dfea68d24d94b5bf2624866057eec942734366b1d6ffb840828184b",
+        "access_token": "c078aa3bc0a54908455aa5676f266bdbd6640dac749912149c1d5ace580f5f19",
         "preview_reason": null,
         "source_url": null,
-        "entity_picture": "/api/image_proxy/image.3dee_current_print_preview?token=48327f908dfea68d24d94b5bf2624866057eec942734366b1d6ffb840828184b",
+        "entity_picture": "/api/image_proxy/image.3dee_current_print_preview?token=c078aa3bc0a54908455aa5676f266bdbd6640dac749912149c1d5ace580f5f19",
         "friendly_name": "Creality Hi-01BF Current Print Preview"
       },
       "last_changed": "2026-07-14T22:07:45.815181+00:00",
-      "last_reported": "2026-07-29T19:27:03.621730+00:00",
-      "last_updated": "2026-07-29T19:27:03.621730+00:00",
+      "last_reported": "2026-07-30T00:07:03.684320+00:00",
+      "last_updated": "2026-07-30T00:07:03.684320+00:00",
       "context": {
-        "id": "01KYQNGFE5RTJRQN2RCKK12F0N",
+        "id": "01KYR5H5R4TNNWAYH0C6A1M76W",
         "parent_id": null,
         "user_id": null
       }
@@ -16992,15 +16992,15 @@
       "entity_id": "camera.3dee_printer_camera",
       "state": "unavailable",
       "attributes": {
-        "entity_picture": "/api/camera_proxy/camera.3dee_printer_camera?token=8c98b8bb56b8ea46eea16f0c794e2391602560282f88eb7b2c1ad02371d209e0",
+        "entity_picture": "/api/camera_proxy/camera.3dee_printer_camera?token=dca64d19261fe5ef44271b909b4bf1c38f7fd67a2e7820c4bfc3f10d87e49c76",
         "friendly_name": "Creality Hi-01BF Printer Camera",
         "supported_features": 2
       },
       "last_changed": "2026-07-18T15:53:29.141852+00:00",
-      "last_reported": "2026-07-29T19:27:03.621571+00:00",
-      "last_updated": "2026-07-29T19:27:03.621571+00:00",
+      "last_reported": "2026-07-30T00:07:03.684154+00:00",
+      "last_updated": "2026-07-30T00:07:03.684154+00:00",
       "context": {
-        "id": "01KYQNGFE5521QR3MJJQNXEHWA",
+        "id": "01KYR5H5R4F1NP4PDH1H1ZK7Y4",
         "parent_id": null,
         "user_id": null
       }
