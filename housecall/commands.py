@@ -5,9 +5,11 @@ HouseCall command implementations.
 from .diagnostics import DiagnosticRunner
 
 
-def run_doctor():
+def run_doctor(verbose=False):
     """Run HouseCall diagnostics."""
 
+    if verbose:
+        print("Verbose mode enabled.\n")
     runner = DiagnosticRunner()
 
     print("HouseCall Doctor")
@@ -17,6 +19,8 @@ def run_doctor():
     from .health import HEALTH_CHECKS
 
     for check in HEALTH_CHECKS:
+        if verbose:
+            print(f"Running {check.__class__.__name__}...")
         runner.add(check.run())
 
     # Display results

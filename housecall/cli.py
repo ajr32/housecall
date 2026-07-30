@@ -10,7 +10,6 @@ import logging
 from .analyzer import analyze
 from .commands import run_doctor
 from .console import section
-from .diagnostics import DiagnosticRunner
 from .home import show_home
 from .report import save_json
 from .scanner import scan
@@ -21,42 +20,9 @@ def show_menu():
     pass
 
 
-def run_doctor():
-    """Run HouseCall diagnostics."""
-
-    runner = DiagnosticRunner()
-
-    print("HouseCall Doctor")
-    print("-----------------")
-    print()
-
-    from .health import HEALTH_CHECKS
-
-    for check in HEALTH_CHECKS:
-        runner.add(check.run())
-
-    for result in runner.results:
-        status = "✓" if result.passed else "✗"
-        print(f"{status} {result.name}: {result.message}")
-
-    print()
-    print("Summary")
-    print("-------")
-    print(f"Checks run : {len(runner.results)}")
-    print(f"Passed     : {runner.passed}")
-    print(f"Failed     : {runner.failed}")
-    print()
-
-    if runner.success:
-        print("✓ No problems found.")
-    else:
-        print("✗ One or more diagnostics failed.")
-
-
 def main():
     parser = argparse.ArgumentParser(
-        prog="housecall",
-        description="Analyze a Home Assistant installation."
+        prog="housecall", description="Analyze a Home Assistant installation."
     )
 
     parser.add_argument(
@@ -72,9 +38,16 @@ def main():
         help="Test the Home Assistant connection.",
     )
 
-    subparsers.add_parser(
+    doctor_parser = subparsers.add_parser(
         "doctor",
         help="Check the HouseCall installation.",
+    )
+
+    doctor_parser.add_argument(
+        "-v",
+        "--verbose",
+        action="store_true",
+        help="Show detailed diagnostic output.",
     )
 
     args = parser.parse_args()
@@ -96,7 +69,7 @@ def main():
         return
 
     if args.command == "doctor":
-        run_doctor()
+        run_doctor(args.verbose)
         return
 
     from .logging_config import configure_logging
@@ -111,8 +84,8 @@ def main():
     print(f"🏠 HouseCall v{settings.version}")
     print("=" * 50)
 
-    from .config import validate_configuration
     from .api import client
+    from .config import validate_configuration
 
     validate_configuration()
     print("Testing connection...")
@@ -158,9 +131,9 @@ def main():
     section("Top Domains")
 
     for domain, count in sorted(
-            summary["domains"].items(),
-            key=lambda item: item[1],
-            reverse=True,
+        summary["domains"].items(),
+        key=lambda item: item[1],
+        reverse=True,
     ):
         print(f"{domain:<20} {count}")
 

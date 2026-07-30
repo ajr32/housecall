@@ -30,7 +30,9 @@ def show_home():
         choice = input("Select an option: ").strip()
 
         if choice == "1":
-            run_doctor()
+            verbose = input("\nVerbose output? (y/N): ").strip().lower() == "y"
+
+            run_doctor(verbose)
             input("\nPress Enter to return to the Home Screen...")
             print()
 
