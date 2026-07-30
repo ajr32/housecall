@@ -8,6 +8,7 @@ from .report import save_json
 from .scanner import scan
 from .analyzer import analyze
 from .console import section
+from .diagnostics import Diagnostic, DiagnosticRunner
 
 import argparse
 import logging
@@ -34,6 +35,11 @@ def main():
         help="Test the Home Assistant connection.",
     )
 
+    subparsers.add_parser(
+        "doctor",
+        help="Check the HouseCall installation.",
+    )
+
     args = parser.parse_args()
 
     if args.command == "test":
@@ -46,6 +52,44 @@ def main():
         print("✓ Connected\n")
         print(f"Version : {config['version']}")
         print(f"Location: {config['location_name']}")
+        return
+
+    if args.command == "doctor":
+        from .config import validate_configuration
+        from .api import client
+
+        runner = DiagnosticRunner()
+
+        print("HouseCall Doctor")
+        print("-----------------")
+        print()
+
+        # Configuration
+        try:
+            validate_configuration()
+            runner.add(Diagnostic("Configuration", True, "Configuration OK"))
+        except Exception as exc:
+            runner.add(Diagnostic("Configuration", False, str(exc)))
+
+        # Home Assistant connection
+        try:
+            client.test_connection()
+            runner.add(Diagnostic("Connection", True, "Home Assistant connection"))
+        except Exception as exc:
+            runner.add(Diagnostic("Connection", False, str(exc)))
+
+        # Display results
+        for result in runner.results:
+            status = "✓" if result.passed else "✗"
+            print(f"{status} {result.name}: {result.message}")
+
+        print()
+
+        if runner.success:
+            print("✓ No problems found.")
+        else:
+            print("✗ One or more diagnostics failed.")
+
         return
 
     from .logging_config import configure_logging

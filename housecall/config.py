@@ -30,9 +30,5 @@ HA_TOKEN = get_setting("HA_TOKEN")
 def validate_configuration():
     """Validate the application configuration."""
 
-    print("Validating configuration...")
-
     get_setting("HA_URL")
     get_setting("HA_TOKEN")
-
-    print("✓ Configuration OK")
