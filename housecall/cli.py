@@ -8,7 +8,7 @@ from .report import save_json
 from .scanner import scan
 from .analyzer import analyze
 from .console import section
-from .diagnostics import Diagnostic, DiagnosticRunner
+from .diagnostics import DiagnosticRunner
 
 import argparse
 import logging
@@ -55,9 +55,6 @@ def main():
         return
 
     if args.command == "doctor":
-        from .config import validate_configuration
-        from .api import client
-
         runner = DiagnosticRunner()
 
         print("HouseCall Doctor")
@@ -65,18 +62,10 @@ def main():
         print()
 
         # Configuration
-        try:
-            validate_configuration()
-            runner.add(Diagnostic("Configuration", True, "Configuration OK"))
-        except Exception as exc:
-            runner.add(Diagnostic("Configuration", False, str(exc)))
+        from .health import HEALTH_CHECKS
 
-        # Home Assistant connection
-        try:
-            client.test_connection()
-            runner.add(Diagnostic("Connection", True, "Home Assistant connection"))
-        except Exception as exc:
-            runner.add(Diagnostic("Connection", False, str(exc)))
+        for check in HEALTH_CHECKS:
+            runner.add(check.run())
 
         # Display results
         for result in runner.results:
