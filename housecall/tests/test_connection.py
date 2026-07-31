@@ -1,3 +1,4 @@
+from housecall.exceptions import APIError
 from housecall.health import ConnectionHealthCheck
 
 
@@ -19,7 +20,7 @@ def test_connection_success(monkeypatch):
 
 def test_connection_failure(monkeypatch):
     def fake_connection():
-        raise ConnectionError("Unable to connect")
+        raise APIError("Unable to connect")
 
     monkeypatch.setattr(
         "housecall.health.client.test_connection",

@@ -3,6 +3,7 @@ Health check model for HouseCall.
 """
 
 from abc import ABC, abstractmethod
+from datetime import datetime, timedelta, timezone
 
 from housecall.exceptions import APIError, ConfigurationError
 
@@ -196,6 +197,49 @@ class DuplicateEntityNamesHealthCheck(HealthCheck):
         )
 
 
+class StaleEntitiesHealthCheck(HealthCheck):
+    """Checks for entities that have not updated recently."""
+
+    STALE_DAYS = 7
+
+    def __init__(self):
+        super().__init__("Stale Entities")
+
+    def run(self) -> Diagnostic:
+        results = scan()
+        states = results["states"]
+
+        stale = []
+
+        cutoff = datetime.now(timezone.utc) - timedelta(days=self.STALE_DAYS)
+
+        for state in states:
+            entity_id = state.get("entity_id")
+            last_updated = state.get("last_updated")
+
+            if not entity_id or not last_updated:
+                continue
+
+            updated = datetime.fromisoformat(
+                last_updated.replace("Z", "+00:00")
+            )
+
+            if updated < cutoff:
+                stale.append(entity_id)
+
+            if stale:
+                return Diagnostic(
+                    self.name,
+                    False,
+                    f"{len(stale)} entities have not updated in over {self.STALE_DAYS} days",
+                )
+
+            return Diagnostic(
+                self.name,
+                True,
+                "All active entities have updated recently",
+            )
+                
 HEALTH_CHECKS = [
     ConfigurationHealthCheck(),
     ConnectionHealthCheck(),
@@ -203,4 +247,5 @@ HEALTH_CHECKS = [
     UnknownEntitiesHealthCheck(),
     MissingFriendlyNamesHealthCheck(),
     DuplicateEntityNamesHealthCheck(),
+    StaleEntitiesHealthCheck(),
 ]
