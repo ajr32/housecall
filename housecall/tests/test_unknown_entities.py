@@ -1,4 +1,3 @@
-import pytest
 
 from housecall.health import UnknownEntitiesHealthCheck
 

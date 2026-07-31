@@ -21,12 +21,8 @@ def analyze(inventory):
         )
 
     if summary["unknown"] > 0:
-        findings["warnings"].append(
-            f"{summary['unknown']} unknown entities detected."
-        )
+        findings["warnings"].append(f"{summary['unknown']} unknown entities detected.")
 
-    findings["info"].append(
-        f"{summary['total_states']} total entities found."
-    )
+    findings["info"].append(f"{summary['total_states']} total entities found.")
 
     return findings

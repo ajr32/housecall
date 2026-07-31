@@ -1,11 +1,10 @@
-from pathlib import Path
 import subprocess
+import time
+from pathlib import Path
 
 import yaml
-from github import Github, Auth
+from github import Auth, Github
 from github.GithubException import GithubException
-
-import time
 
 # ----------------------------------------------------------------------
 # Console Colors
@@ -24,10 +23,8 @@ RESET = "\033[0m"
 stats = {
     "labels_created": 0,
     "labels_existing": 0,
-
     "milestones_created": 0,
     "milestones_existing": 0,
-
     "issues_created": 0,
     "issues_updated": 0,
     "issues_unchanged": 0,
@@ -47,6 +44,7 @@ MILESTONE_FILE = BASE_DIR / "milestones.yaml"
 # GitHub
 # ----------------------------------------------------------------------
 
+
 def get_github():
     """Return an authenticated GitHub client using the GitHub CLI."""
     token = subprocess.check_output(["gh", "auth", "token"], text=True).strip()
@@ -62,6 +60,7 @@ def get_repo():
 # ----------------------------------------------------------------------
 # Loaders
 # ----------------------------------------------------------------------
+
 
 def load_labels():
     """Load labels from labels.yaml."""
@@ -86,6 +85,7 @@ def load_issue(file):
 # ----------------------------------------------------------------------
 # GitHub Synchronization
 # ----------------------------------------------------------------------
+
 
 def ensure_label(repo, name, color, description):
     """Create a label if it doesn't already exist."""
@@ -115,13 +115,7 @@ def ensure_milestone(repo, title, description):
     return milestone
 
 
-def ensure_issue(
-    repo,
-    issue,
-    issues,
-    milestones,
-    labels
-):
+def ensure_issue(repo, issue, issues, milestones, labels):
     """Create an issue if it doesn't already exist."""
 
     title = issue["title"]
@@ -132,10 +126,7 @@ def ensure_issue(
         milestone_obj = milestones.get(issue["milestone"])
 
         if milestone_obj is None:
-            print(
-                f"{YELLOW}⚠ Milestone not found:{RESET} "
-                f"{issue['milestone']}"
-            )
+            print(f"{YELLOW}⚠ Milestone not found:{RESET} {issue['milestone']}")
 
     label_objects = []
 
@@ -151,7 +142,6 @@ def ensure_issue(
     existing = issues.get(title)
 
     if existing:
-
         changes = []
 
         # ----------------------------------------------------------
@@ -165,11 +155,7 @@ def ensure_issue(
         # Compare milestone
         # ----------------------------------------------------------
 
-        existing_milestone = (
-            existing.milestone.title
-            if existing.milestone
-            else None
-        )
+        existing_milestone = existing.milestone.title if existing.milestone else None
 
         new_milestone = issue.get("milestone")
 
@@ -180,14 +166,9 @@ def ensure_issue(
         # Compare labels
         # ----------------------------------------------------------
 
-        existing_labels = sorted(
-            label.name
-            for label in existing.labels
-        )
+        existing_labels = sorted(label.name for label in existing.labels)
 
-        new_labels = sorted(
-            issue.get("labels", [])
-        )
+        new_labels = sorted(issue.get("labels", []))
 
         if existing_labels != new_labels:
             changes.append("Labels")
@@ -197,32 +178,25 @@ def ensure_issue(
         # ----------------------------------------------------------
 
         if changes:
-
             existing.edit(
                 body=issue["body"],
                 milestone=milestone_obj,
-                labels=issue.get("labels", [])
+                labels=issue.get("labels", []),
             )
 
-            print(
-                f"{GREEN}✓ Updated issue:{RESET} "
-                f"{title} ({', '.join(changes)})"
-            )
+            print(f"{GREEN}✓ Updated issue:{RESET} {title} ({', '.join(changes)})")
         else:
-
             stats["issues_unchanged"] += 1
             print(f"{RED}• Issue unchanged:{RESET} {title}")
         return
 
     repo.create_issue(
-        title=title,
-        body=issue["body"],
-        milestone=milestone_obj,
-        labels=label_objects
+        title=title, body=issue["body"], milestone=milestone_obj, labels=label_objects
     )
 
     stats["issues_created"] += 1
     print(f"{GREEN}✓ Created issue:{RESET} {title}")
+
 
 def sync_labels(repo):
     """Synchronize labels from labels.yaml."""
@@ -240,24 +214,14 @@ def sync_milestones(repo):
         ensure_milestone(repo, milestone["title"], milestone.get("description", ""))
 
 
-def sync_issues(
-    repo,
-    issues,
-    milestones,
-    labels
-):
+def sync_issues(repo, issues, milestones, labels):
     """Synchronize issues from the issues folder."""
     issue_files = sorted(ISSUE_DIR.rglob("*.yaml"))
     print(f"\n{BLUE}Synchronizing {len(issue_files)} issues...{RESET}\n")
     for file in issue_files:
         issue = load_issue(file)
-        ensure_issue(
-            repo,
-            issue,
-            issues,
-            milestones,
-            labels
-        )
+        ensure_issue(repo, issue, issues, milestones, labels)
+
 
 # ----------------------------------------------------------------------
 # Main
@@ -265,36 +229,25 @@ def sync_issues(
 
 start = time.perf_counter()
 
+
 def main():
     print(f"\n{BLUE}HouseCall GitHub Sync{RESET}")
     print("=" * 50)
 
     repo = get_repo()
-    issues = {
-        issue.title: issue
-        for issue in repo.get_issues(state="all")
-    }
+    issues = {issue.title: issue for issue in repo.get_issues(state="all")}
 
     milestones = {
-        milestone.title: milestone
-        for milestone in repo.get_milestones(state="all")
+        milestone.title: milestone for milestone in repo.get_milestones(state="all")
     }
 
-    labels = {
-        label.name: label
-        for label in repo.get_labels()
-    }
+    labels = {label.name: label for label in repo.get_labels()}
 
     print(f"Repository: {repo.full_name}")
 
     sync_labels(repo)
     sync_milestones(repo)
-    sync_issues(
-        repo,
-        issues,
-        milestones,
-        labels
-    )
+    sync_issues(repo, issues, milestones, labels)
 
     print("\n" + "=" * 50)
 
@@ -315,6 +268,7 @@ def main():
     print(f"Unchanged : {stats['issues_unchanged']}")
 
     print(f"\n{GREEN}Synchronization complete!{RESET}")
+
 
 if __name__ == "__main__":
     main()

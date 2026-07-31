@@ -17,9 +17,7 @@ def get_setting(name: str) -> str:
     value = os.getenv(name)
 
     if not value:
-        raise ConfigurationError(
-            f"Missing required configuration setting: {name}"
-        )
+        raise ConfigurationError(f"Missing required configuration setting: {name}")
 
     return value
 

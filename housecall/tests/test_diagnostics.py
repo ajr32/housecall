@@ -9,6 +9,7 @@ def test_runner_starts_empty():
     assert runner.failed == 0
     assert runner.success is True
 
+
 def test_add_passing_result():
     runner = DiagnosticRunner()
 
@@ -24,6 +25,7 @@ def test_add_passing_result():
     assert runner.failed == 0
     assert runner.success is True
 
+
 def test_add_failed_result():
     runner = DiagnosticRunner()
 
@@ -38,6 +40,7 @@ def test_add_failed_result():
     assert runner.passed == 0
     assert runner.failed == 1
     assert runner.success is False
+
 
 def test_runner_counts_multiple():
     runner = DiagnosticRunner()

@@ -1,5 +1,4 @@
 from housecall.commands import run_doctor
-from housecall.diagnostics import Diagnostic
 
 
 def test_doctor_success(capsys):
@@ -24,7 +23,7 @@ def test_doctor_verbose(capsys):
     assert "Running ConnectionHealthCheck..." in output
 
 
-#class FakeHealthCheck:
+# class FakeHealthCheck:
 #    def __init__(self, diagnostic):
 #        self.diagnostic = diagnostic
 
@@ -35,4 +34,4 @@ def test_doctor_verbose(capsys):
 # checks = [
 #    FakeHealthCheck(Diagnostic("One", True, "OK")),
 #    FakeHealthCheck(Diagnostic("Two", False, "Boom")),
-#]
+# ]

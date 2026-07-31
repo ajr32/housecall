@@ -7,8 +7,8 @@ Communicates with the Home Assistant REST API.
 import requests
 
 from .config import HA_TOKEN, HA_URL
-from .settings import settings
 from .exceptions import APIError
+from .settings import settings
 
 
 class HomeAssistantClient:
@@ -21,10 +21,12 @@ class HomeAssistantClient:
     def __init__(self):
         self.session = requests.Session()
 
-        self.session.headers.update({
-            "Authorization": f"Bearer {HA_TOKEN}",
-            "Content-Type": "application/json",
-        })
+        self.session.headers.update(
+            {
+                "Authorization": f"Bearer {HA_TOKEN}",
+                "Content-Type": "application/json",
+            }
+        )
 
     def test_connection(self):
         """Verify that Home Assistant is reachable."""
@@ -43,14 +45,10 @@ class HomeAssistantClient:
             response.raise_for_status()
 
         except requests.exceptions.ConnectionError:
-            raise APIError(
-                "Unable to connect to Home Assistant."
-            )
+            raise APIError("Unable to connect to Home Assistant.")
 
         except requests.exceptions.HTTPError as exc:
-            raise APIError(
-                f"Authentication failed ({exc.response.status_code})."
-            )
+            raise APIError(f"Authentication failed ({exc.response.status_code}).")
 
         return response.json()
 
