@@ -7,7 +7,7 @@ def test_doctor_success(capsys):
 
     output = capsys.readouterr().out
 
-    assert "HouseCall Doctor" in output
+    assert "HouseCall Health Report" in output
     assert "Summary" in output
     assert "Checks run :" in output
     assert "Passed     :" in output

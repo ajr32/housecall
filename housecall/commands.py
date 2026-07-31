@@ -15,8 +15,9 @@ def run_doctor(verbose=False):
 
     runner = DiagnosticRunner()
 
-    print("HouseCall Doctor")
-    print("-----------------")
+    print()
+    print("HouseCall Health Report")
+    print("=======================")
     print()
 
     from .health import HEALTH_CHECKS
@@ -36,6 +37,9 @@ def run_doctor(verbose=False):
 
         runner.add(result)
 
+    print("Diagnostics")
+    print("-----------")
+
     # Display results
     for result in runner.results:
         status = "✓" if result.passed else "✗"
@@ -52,7 +56,11 @@ def run_doctor(verbose=False):
     print(f"Total time : {total_time:.2f}s")
     print()
 
+    print()
+    print("Overall Health")
+    print("--------------")
+
     if runner.success:
-        print("✓ No problems found")
+        print("Status : PASS")
     else:
-        print("✗ One or more diagnostics failed")
+        print("Status : FAIL")

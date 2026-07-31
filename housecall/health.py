@@ -7,7 +7,6 @@ from abc import ABC, abstractmethod
 from .diagnostics import Diagnostic
 from .scanner import scan
 
-
 class HealthCheck(ABC):
     """Base class for all health checks."""
 
@@ -91,7 +90,7 @@ class UnavailableEntitiesHealthCheck(HealthCheck):
         return Diagnostic(
             self.name,
             True,
-            "None found.",
+            "None found",
         )
 
 
@@ -119,10 +118,40 @@ class UnknownEntitiesHealthCheck(HealthCheck):
             "None found",
         )
 
+class MissingFriendlyNamesHealthCheck(HealthCheck):
+    """Checks for entities missing friendly names."""
+
+    def __init__(self):
+        super().__init__("Friendly Names")
+
+    def run(self) -> Diagnostic:
+        inventory = scan()
+
+        missing = []
+
+        for state in inventory["states"]:
+            friendly_name = state.get("attributes", {}).get("friendly_name")
+
+            if not friendly_name or not friendly_name.strip():
+                missing.append(state["entity_id"])
+
+        if missing:
+            return Diagnostic(
+                self.name,
+                False,
+                f"{len(missing)} entities missing friendly names",
+            )
+
+        return Diagnostic(
+            self.name,
+            True,
+            "All entities have friendly names",
+        )
 
 HEALTH_CHECKS = [
     ConfigurationHealthCheck(),
     ConnectionHealthCheck(),
     UnavailableEntitiesHealthCheck(),
     UnknownEntitiesHealthCheck(),
+    MissingFriendlyNamesHealthCheck(),
 ]
