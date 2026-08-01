@@ -1,6 +1,6 @@
 """Interactive Home Screen for HouseCall."""
 
-from .commands import run_doctor
+from .commands import run_doctor, run_housekeeping
 from .settings import settings
 
 
@@ -17,11 +17,12 @@ def show_home():
         print("Health")
         print("------")
         print("1. Doctor")
+        print("2. Housekeeping")
         print()
 
         print("Utilities")
         print("---------")
-        print("2. Version")
+        print("3. Version")
         print()
 
         print("0. Exit")
@@ -36,8 +37,15 @@ def show_home():
             input("\nPress Enter to return to the Home Screen...")
             print()
 
-        # elif choice == "2":
-        #     run_version()
+        if choice == "2":
+#            verbose = input("\nVerbose output? (y/N): ").strip().lower() == "y"
+
+            run_housekeeping()
+            input("\nPress Enter to return to the Home Screen...")
+            print()
+
+        #if choice == "3":
+        #    run_version()
         #     input("\nPress Enter to return to the Home Screen...")
         #     print()
 

@@ -239,7 +239,80 @@ class StaleEntitiesHealthCheck(HealthCheck):
                 True,
                 "All active entities have updated recently",
             )
-                
+
+
+class DisabledEntitiesHealthCheck(HealthCheck):
+    """Checks for disabled Home Assistant entities."""
+
+    def __init__(self):
+        super().__init__("Disabled Entities")
+
+    def run(self) -> Diagnostic:
+        inventory = scan()
+
+        disabled = inventory["summary"]["disabled_entities"]
+
+        if disabled:
+            return Diagnostic(
+                self.name,
+                False,
+                f"{len(disabled)} disabled entities detected",
+            )
+
+        return Diagnostic(
+            self.name,
+            True,
+            "None found",
+        )
+
+class OrphanedEntitiesHealthCheck(HealthCheck):
+    """Checks for orphaned Home Assistant entities."""
+
+    def __init__(self):
+        super().__init__("Orphaned Entities")
+
+    def run(self) -> Diagnostic:
+        inventory = scan()
+
+        orphaned = inventory["summary"]["orphaned_entities"]
+
+        if orphaned:
+            return Diagnostic(
+                self.name,
+                False,
+                f"{len(orphaned)} orphaned entities detected",
+            )
+
+        return Diagnostic(
+            self.name,
+            True,
+            "None found",
+        )
+
+class DuplicateHelpersHealthCheck(HealthCheck):
+    """Checks for duplicate Home Assistant helpers."""
+
+    def __init__(self):
+        super().__init__("Duplicate Helpers")
+
+    def run(self) -> Diagnostic:
+        inventory = scan()
+
+        duplicates = inventory["summary"]["duplicate_helpers"]
+
+        if duplicates:
+            return Diagnostic(
+                self.name,
+                False,
+                f"{len(duplicates)} duplicate helpers detected",
+            )
+
+        return Diagnostic(
+            self.name,
+            True,
+            "None found",
+        )
+
 HEALTH_CHECKS = [
     ConfigurationHealthCheck(),
     ConnectionHealthCheck(),
@@ -248,4 +321,7 @@ HEALTH_CHECKS = [
     MissingFriendlyNamesHealthCheck(),
     DuplicateEntityNamesHealthCheck(),
     StaleEntitiesHealthCheck(),
+    DisabledEntitiesHealthCheck(),
+    OrphanedEntitiesHealthCheck(),
+    DuplicateHelpersHealthCheck()
 ]

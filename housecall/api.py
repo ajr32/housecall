@@ -12,11 +12,12 @@ from .settings import settings
 
 
 class HomeAssistantClient:
-    """
-    Wrapper around the Home Assistant REST API.
+    """Communicate with Home Assistant."""
 
-    Manages authentication, HTTP requests, and connection handling.
-    """
+    API_ROOT = "/api"
+    STATES_ENDPOINT = "/api/states"
+    CONFIG_ENDPOINT = "/api/config"
+    SERVICES_ENDPOINT = "/api/services"
 
     def __init__(self):
         self.session = requests.Session()
@@ -31,7 +32,12 @@ class HomeAssistantClient:
     def test_connection(self):
         """Verify that Home Assistant is reachable."""
 
-        self.get("/api/")
+        self.get(self.API_ROOT)
+
+    def get_states(self):
+        """Retrieve all Home Assistant entity states."""
+
+        return self.get(self.STATES_ENDPOINT)
 
     def get(self, endpoint):
         """Retrieve data from a Home Assistant API endpoint."""
@@ -52,52 +58,61 @@ class HomeAssistantClient:
 
         return response.json()
 
+    def get_config(self):
+        """Retrieve Home Assistant configuration."""
 
-def post(self, endpoint, data=None):
-    """Send data to a Home Assistant API endpoint."""
+        return self.get(self.CONFIG_ENDPOINT)
 
-    response = self.session.post(
-        f"{HA_URL}{endpoint}",
-        json=data,
-        timeout=30,
-    )
+    def get_services(self):
+        """Retrieve Home Assistant services."""
 
-    response.raise_for_status()
+        return self.get(self.SERVICES_ENDPOINT)
 
-    return response.json()
+    def post(self, endpoint, data=None):
+        """Send data to a Home Assistant API endpoint."""
 
+        response = self.session.post(
+            f"{HA_URL}{endpoint}",
+            json=data,
+            timeout=settings.request_timeout,
+        )
 
-def put(self, endpoint, data=None):
-    """Update data through a Home Assistant API endpoint."""
+        response.raise_for_status()
 
-    response = self.session.put(
-        f"{HA_URL}{endpoint}",
-        json=data,
-        timeout=30,
-    )
+        return response.json()
 
-    response.raise_for_status()
+    def put(self, endpoint, data=None):
+        """Update data through a Home Assistant API endpoint."""
 
-    return response.json()
+        response = self.session.put(
+            f"{HA_URL}{endpoint}",
+            json=data,
+            timeout=settings.request_timeout,
+        )
 
+        response.raise_for_status()
 
-def delete(self, endpoint):
-    """Delete data through a Home Assistant API endpoint."""
+        return response.json()
 
-    response = self.session.delete(
-        f"{HA_URL}{endpoint}",
-        timeout=30,
-    )
+    def delete(self, endpoint):
+        """Delete data through a Home Assistant API endpoint."""
 
-    response.raise_for_status()
+        response = self.session.delete(
+            f"{HA_URL}{endpoint}",
+            timeout=settings.request_timeout,
+        )
+
+        response.raise_for_status()
+
+        return response.json()
 
 
 client = HomeAssistantClient()
 
 
 def get_config():
-    return client.get("/api/config")
+    return client.get_config()
 
 
 def get_states():
-    return client.get("/api/states")
+    return client.get_states()

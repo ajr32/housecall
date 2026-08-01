@@ -43,10 +43,7 @@ def main():
         help="Check the HouseCall installation.",
     )
 
-    housekeeping_parser = subparsers.add_parser(
-        "housekeeping",
-        help="Run Housekeeping checks.",
-    )
+    subparsers.add_parser("housekeeping", help="...")
 
     doctor_parser.add_argument(
         "-v",

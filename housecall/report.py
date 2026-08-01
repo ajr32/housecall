@@ -2,6 +2,7 @@
 
 import json
 
+
 def build_report(runner, total_time):
     """Build a diagnostic report."""
 

@@ -7,6 +7,7 @@ from time import perf_counter
 from .diagnostics import DiagnosticRunner
 from .report import build_report, save_json
 
+
 def run_doctor(verbose=False):
     """Run HouseCall diagnostics."""
 
