@@ -5,7 +5,7 @@ HouseCall command implementations.
 from time import perf_counter
 
 from .diagnostics import DiagnosticRunner
-
+from .report import build_report, save_json
 
 def run_doctor(verbose=False):
     """Run HouseCall diagnostics."""
@@ -40,20 +40,29 @@ def run_doctor(verbose=False):
     print("Diagnostics")
     print("-----------")
 
-    # Display results
-    for result in runner.results:
-        status = "✓" if result.passed else "✗"
-        print(f"{status} {result.name}: {result.message} ({result.elapsed:.2f}s)")
-
     total_time = perf_counter() - overall_start
+    report = build_report(runner, total_time)
+    save_json(report)
+
+    # Display results
+    for result in report["checks"]:
+        status = "✓" if result["passed"] else "✗"
+
+        print(
+            f"{status} {result['name']}: {result['message']} ({result['elapsed']:.2f}s)"
+        )
+
+
 
     print()
     print("Summary")
     print("-------")
-    print(f"Checks run : {len(runner.results)}")
-    print(f"Passed     : {runner.passed}")
-    print(f"Failed     : {runner.failed}")
-    print(f"Total time : {total_time:.2f}s")
+    summary = report["summary"]
+
+    print(f"Checks run : {summary['checks_run']}")
+    print(f"Passed     : {summary['passed']}")
+    print(f"Failed     : {summary['failed']}")
+    print(f"Total time : {summary['runtime']:.2f}s")
     print()
 
     print()
