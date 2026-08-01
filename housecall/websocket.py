@@ -78,6 +78,31 @@ class HomeAssistantWebSocketClient:
             }
         )
 
+    def get_automations(self):
+        """Retrieve all automations."""
+
+        return self.send(
+            {
+                "type": "config/automation/list",
+            }
+        )
+
+    def get_area_registry(self):
+        """Retrieve the Home Assistant area registry."""
+
+        return self.send(
+            {
+                "type": "config/area_registry/list",
+            }
+        )
+
+    def get_label_registry(self):
+        return self.send(
+            {
+                "type": "config/label_registry/list",
+            }
+        )
+
     def close(self):
         """Close the websocket."""
 

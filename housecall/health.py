@@ -11,6 +11,11 @@ from .diagnostics import Diagnostic
 from .scanner import scan
 
 
+# ============================================================================
+# Base Classes
+# ============================================================================
+
+
 class HealthCheck(ABC):
     """Base class for all health checks."""
 
@@ -21,6 +26,10 @@ class HealthCheck(ABC):
     def run(self) -> Diagnostic:
         """Run the health check and return a Diagnostic."""
 
+
+# ============================================================================
+# Configuration Checks
+# ============================================================================
 
 from .config import validate_configuration
 
@@ -70,6 +79,11 @@ class ConnectionHealthCheck(HealthCheck):
                 False,
                 str(exc),
             )
+
+
+# ============================================================================
+# Entity State Checks
+# ============================================================================
 
 
 class UnavailableEntitiesHealthCheck(HealthCheck):
@@ -227,18 +241,23 @@ class StaleEntitiesHealthCheck(HealthCheck):
             if updated < cutoff:
                 stale.append(entity_id)
 
-            if stale:
-                return Diagnostic(
-                    self.name,
-                    False,
-                    f"{len(stale)} entities have not updated in over {self.STALE_DAYS} days",
-                )
-
+        if stale:
             return Diagnostic(
                 self.name,
-                True,
-                "All active entities have updated recently",
+                False,
+                f"{len(stale)} entities have not updated in over {self.STALE_DAYS} days",
             )
+
+        return Diagnostic(
+            self.name,
+            True,
+            "All active entities have updated recently",
+        )
+
+
+# ============================================================================
+# Entity Registry Checks
+# ============================================================================
 
 
 class DisabledEntitiesHealthCheck(HealthCheck):
@@ -265,6 +284,7 @@ class DisabledEntitiesHealthCheck(HealthCheck):
             "None found",
         )
 
+
 class OrphanedEntitiesHealthCheck(HealthCheck):
     """Checks for orphaned Home Assistant entities."""
 
@@ -288,6 +308,12 @@ class OrphanedEntitiesHealthCheck(HealthCheck):
             True,
             "None found",
         )
+
+
+# ============================================================================
+# Helper Checks
+# ============================================================================
+
 
 class DuplicateHelpersHealthCheck(HealthCheck):
     """Checks for duplicate Home Assistant helpers."""
@@ -313,6 +339,72 @@ class DuplicateHelpersHealthCheck(HealthCheck):
             "None found",
         )
 
+
+# ============================================================================
+# Area Registry Checks
+# ============================================================================
+
+
+class EmptyAreasHealthCheck(HealthCheck):
+    """Checks for empty Home Assistant areas."""
+
+    def __init__(self):
+        super().__init__("Empty Areas")
+
+    def run(self) -> Diagnostic:
+        inventory = scan()
+
+        empty = inventory["summary"]["empty_areas"]
+
+        if empty:
+            return Diagnostic(
+                self.name,
+                False,
+                f"{len(empty)} empty areas detected",
+            )
+
+        return Diagnostic(
+            self.name,
+            True,
+            "None found",
+        )
+
+
+# ============================================================================
+# Label Registry Checks
+# ============================================================================
+
+
+class EmptyLabelsHealthCheck(HealthCheck):
+    """Checks for empty Home Assistant labels."""
+
+    def __init__(self):
+        super().__init__("Empty Labels")
+
+    def run(self) -> Diagnostic:
+        inventory = scan()
+
+        empty = inventory["summary"]["empty_labels"]
+
+        if empty:
+            return Diagnostic(
+                self.name,
+                False,
+                f"{len(empty)} empty labels detected",
+            )
+
+        return Diagnostic(
+            self.name,
+            True,
+            "None found",
+        )
+
+
+# ============================================================================
+# Health Check Registry
+# ============================================================================
+
+
 HEALTH_CHECKS = [
     ConfigurationHealthCheck(),
     ConnectionHealthCheck(),
@@ -323,5 +415,7 @@ HEALTH_CHECKS = [
     StaleEntitiesHealthCheck(),
     DisabledEntitiesHealthCheck(),
     OrphanedEntitiesHealthCheck(),
-    DuplicateHelpersHealthCheck()
+    DuplicateHelpersHealthCheck(),
+    EmptyAreasHealthCheck(),
+    EmptyLabelsHealthCheck(),
 ]

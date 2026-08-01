@@ -4,68 +4,80 @@
       "name": "Configuration",
       "passed": true,
       "message": "OK",
-      "elapsed": 2.6299996534362435e-05
+      "elapsed": 1.3200013199821115e-05
     },
     {
       "name": "Connection",
       "passed": false,
       "message": "Authentication failed (404).",
-      "elapsed": 0.4949893000011798
+      "elapsed": 0.5610965999949258
     },
     {
       "name": "Unavailable Entities",
       "passed": false,
       "message": "448 unavailable entities detected",
-      "elapsed": 0.34478569999919273
+      "elapsed": 0.4874427000177093
     },
     {
       "name": "Unknown Entities",
       "passed": false,
       "message": "28 unknown entities detected",
-      "elapsed": 0.2954051000124309
+      "elapsed": 0.3020466000016313
     },
     {
       "name": "Friendly Names",
       "passed": true,
       "message": "All entities have friendly names",
-      "elapsed": 0.2991111000010278
+      "elapsed": 0.3054822999984026
     },
     {
       "name": "Duplicate Names",
       "passed": false,
       "message": "16 entities have duplicate friendly names",
-      "elapsed": 0.27515080000739545
+      "elapsed": 0.27569139999104664
     },
     {
       "name": "Stale Entities",
-      "passed": true,
-      "message": "All active entities have updated recently",
-      "elapsed": 0.2750637000135612
+      "passed": false,
+      "message": "582 entities have not updated in over 7 days",
+      "elapsed": 0.2911294999939855
     },
     {
       "name": "Disabled Entities",
       "passed": false,
       "message": "647 disabled entities detected",
-      "elapsed": 0.2806511999806389
+      "elapsed": 0.29607350000878796
     },
     {
       "name": "Orphaned Entities",
       "passed": true,
       "message": "None found",
-      "elapsed": 0.2809875000093598
+      "elapsed": 0.28696409999975003
     },
     {
       "name": "Duplicate Helpers",
       "passed": true,
       "message": "None found",
-      "elapsed": 0.2767880999890622
+      "elapsed": 0.3017892999923788
+    },
+    {
+      "name": "Empty Areas",
+      "passed": false,
+      "message": "2 empty areas detected",
+      "elapsed": 0.2964246000046842
+    },
+    {
+      "name": "Empty Labels",
+      "passed": true,
+      "message": "None found",
+      "elapsed": 0.29604919999837875
     }
   ],
   "summary": {
-    "checks_run": 10,
+    "checks_run": 12,
     "passed": 5,
-    "failed": 5,
-    "runtime": 2.8233608000155073,
+    "failed": 7,
+    "runtime": 3.700395000021672,
     "success": false
   }
 }
