@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "name": "Configuration",
+      "passed": true,
+      "message": "OK",
+      "elapsed": 6.499991286545992e-06
+    },
+    {
+      "name": "Connection",
+      "passed": false,
+      "message": "Authentication failed (404).",
+      "elapsed": 0.006861399975605309
+    },
+    {
+      "name": "Unavailable Entities",
+      "passed": false,
+      "message": "448 unavailable entities detected",
+      "elapsed": 0.3280386999831535
+    },
+    {
+      "name": "Unknown Entities",
+      "passed": false,
+      "message": "28 unknown entities detected",
+      "elapsed": 0.31033629999728873
+    },
+    {
+      "name": "Friendly Names",
+      "passed": true,
+      "message": "All entities have friendly names",
+      "elapsed": 0.2901803000131622
+    },
+    {
+      "name": "Duplicate Names",
+      "passed": false,
+      "message": "16 entities have duplicate friendly names",
+      "elapsed": 0.30628599994815886
+    },
+    {
+      "name": "Stale Entities",
+      "passed": false,
+      "message": "582 entities have not updated in over 7 days",
+      "elapsed": 0.28279720002319664
+    },
+    {
+      "name": "Disabled Entities",
+      "passed": false,
+      "message": "647 disabled entities detected",
+      "elapsed": 0.31263150001177564
+    },
+    {
+      "name": "Orphaned Entities",
+      "passed": true,
+      "message": "None found",
+      "elapsed": 0.3076479000155814
+    },
+    {
+      "name": "Empty Areas",
+      "passed": false,
+      "message": "2 empty areas detected",
+      "elapsed": 0.32909179996931925
+    },
+    {
+      "name": "Empty Labels",
+      "passed": true,
+      "message": "None found",
+      "elapsed": 0.28629379998892546
+    },
+    {
+      "name": "Empty Floors",
+      "passed": false,
+      "message": "1 empty floors detected",
+      "elapsed": 0.2832429999834858
+    },
+    {
+      "name": "Duplicate Objects",
+      "passed": true,
+      "message": "None found",
+      "elapsed": 0.30942940001841635
+    }
+  ],
+  "summary": {
+    "checks_run": 13,
+    "passed": 5,
+    "failed": 8,
+    "runtime": 3.353096600039862,
+    "success": false
+  }
+}
