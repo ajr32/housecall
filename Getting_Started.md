@@ -121,7 +121,7 @@ Verify that:
 
 Future HouseCall releases will add:
 
--   Doctor
+-   triage
 -   Housekeeping
 -   Organization
 -   Dashboard Advisor

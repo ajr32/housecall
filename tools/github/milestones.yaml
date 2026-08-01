@@ -5,7 +5,7 @@ milestones:
       Core functionality. Connect to Home Assistant, build the inventory
       model, provide the CLI, and establish the project architecture.
 
-  - title: "v0.2 Doctor"
+  - title: "v0.2 triage"
     description: >
       Evaluate the health of a Home Assistant installation by detecting
       unavailable entities, broken automations, stale integrations, and

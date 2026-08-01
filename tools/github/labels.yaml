@@ -9,7 +9,7 @@ labels:
     color: "1D76DB"
     description: "Scanning and inventory"
 
-  - name: doctor
+  - name: triage
     color: "D73A4A"
     description: "Health checks"
 

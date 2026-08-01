@@ -8,7 +8,7 @@ import argparse
 import logging
 
 from .analyzer import analyze
-from .commands import run_doctor, run_housekeeping
+from .commands import run_triage, run_housekeeping
 from .console import section
 from .home import show_home
 from .report import save_json
@@ -16,14 +16,36 @@ from .scanner import scan
 from .settings import settings
 
 
+# ============================================================================
+# Menu
+# ============================================================================
+
+
 def show_menu():
+    """Display the HouseCall menu."""
     pass
 
 
+# ============================================================================
+# Main
+# ============================================================================
+
+
 def main():
+    """Run the HouseCall command-line interface."""
+
+    # ------------------------------------------------------------------------
+    # Create parser
+    # ------------------------------------------------------------------------
+
     parser = argparse.ArgumentParser(
-        prog="housecall", description="Analyze a Home Assistant installation."
+        prog="housecall",
+        description="Analyze a Home Assistant installation.",
     )
+
+    # ------------------------------------------------------------------------
+    # Global arguments
+    # ------------------------------------------------------------------------
 
     parser.add_argument(
         "--version",
@@ -31,21 +53,35 @@ def main():
         version=f"%(prog)s {settings.version}",
     )
 
+    # ------------------------------------------------------------------------
+    # Subcommands
+    # ------------------------------------------------------------------------
+
     subparsers = parser.add_subparsers(dest="command")
 
-    subparsers.add_parser(
+    test_parser = subparsers.add_parser(
         "test",
         help="Test the Home Assistant connection.",
     )
 
-    doctor_parser = subparsers.add_parser(
-        "doctor",
+    triage_parser = subparsers.add_parser(
+        "triage",
         help="Check the HouseCall installation.",
     )
 
-    subparsers.add_parser("housekeeping", help="...")
+    triage_parser.add_argument(
+        "-v",
+        "--verbose",
+        action="store_true",
+        help="Show detailed diagnostic output.",
+    )
 
-    doctor_parser.add_argument(
+    housekeeping_parser = subparsers.add_parser(
+        "housekeeping",
+        help="Check for cleanup opportunities.",
+    )
+
+    housekeeping_parser.add_argument(
         "-v",
         "--verbose",
         action="store_true",
@@ -53,6 +89,10 @@ def main():
     )
 
     args = parser.parse_args()
+
+    # ------------------------------------------------------------------------
+    # Command dispatch
+    # ------------------------------------------------------------------------
 
     if args.command is None:
         show_home()
@@ -70,13 +110,17 @@ def main():
         print(f"Location: {config['location_name']}")
         return
 
-    if args.command == "doctor":
-        run_doctor(args.verbose)
+    if args.command == "triage":
+        run_triage(args.verbose)
         return
 
     if args.command == "housekeeping":
-        run_housekeeping()
+        run_housekeeping(args.verbose)
         return
+
+    # ------------------------------------------------------------------------
+    # Legacy inventory mode
+    # ------------------------------------------------------------------------
 
     from .logging_config import configure_logging
 
@@ -94,6 +138,7 @@ def main():
     from .config import validate_configuration
 
     validate_configuration()
+
     print("Testing connection...")
     logger.info("Testing Home Assistant connection.")
 

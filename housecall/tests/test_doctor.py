@@ -1,8 +1,8 @@
-from housecall.commands import run_doctor
+from housecall.commands import run_triage
 
 
-def test_doctor_success(capsys):
-    run_doctor()
+def test_triage_success(capsys):
+    run_triage()
 
     output = capsys.readouterr().out
 
@@ -13,8 +13,8 @@ def test_doctor_success(capsys):
     assert "Failed     :" in output
 
 
-def test_doctor_verbose(capsys):
-    run_doctor(verbose=True)
+def test_triage_verbose(capsys):
+    run_triage(verbose=True)
 
     output = capsys.readouterr().out
 

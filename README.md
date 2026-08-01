@@ -17,5 +17,5 @@ pip install housecall
 ## Usage
 
 housecall scan
-housecall doctor
+housecall triage
 housecall report

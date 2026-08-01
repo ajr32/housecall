@@ -431,6 +431,14 @@ class DuplicateObjectsHealthCheck(HealthCheck):
 # Health Check Registry
 # ============================================================================
 
+HOUSEKEEPING_CHECKS = [
+    DisabledEntitiesHealthCheck(),
+    OrphanedEntitiesHealthCheck(),
+    DuplicateObjectsHealthCheck(),
+    EmptyAreasHealthCheck(),
+    EmptyLabelsHealthCheck(),
+    EmptyFloorsHealthCheck(),
+]
 
 HEALTH_CHECKS = [
     ConfigurationHealthCheck(),
@@ -446,4 +454,5 @@ HEALTH_CHECKS = [
     EmptyLabelsHealthCheck(),
     EmptyFloorsHealthCheck(),
     DuplicateObjectsHealthCheck(),
+    *HOUSEKEEPING_CHECKS,
 ]

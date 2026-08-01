@@ -8,7 +8,7 @@ from dataclasses import dataclass
 @dataclass(frozen=True)
 class Settings:
     app_name: str = "HouseCall"
-    version: str = "0.2"
+    version: str = "0.3"
 
     output_file: str = "inventory.json"
 
