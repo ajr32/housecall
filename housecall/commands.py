@@ -52,8 +52,6 @@ def run_doctor(verbose=False):
             f"{status} {result['name']}: {result['message']} ({result['elapsed']:.2f}s)"
         )
 
-
-
     print()
     print("Summary")
     print("-------")
@@ -73,3 +71,11 @@ def run_doctor(verbose=False):
         print("Status : PASS")
     else:
         print("Status : FAIL")
+
+def run_housekeeping(verbose=False):
+    """Run HouseCall housekeeping."""
+
+    print("HouseCall Housekeeping")
+    print("---------------------")
+    print()
+    print("Coming soon.")

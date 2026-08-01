@@ -8,7 +8,7 @@ import argparse
 import logging
 
 from .analyzer import analyze
-from .commands import run_doctor
+from .commands import run_doctor, run_housekeeping
 from .console import section
 from .home import show_home
 from .report import save_json
@@ -22,7 +22,7 @@ def show_menu():
 
 def main():
     parser = argparse.ArgumentParser(
-        prog="housecall", description="Analyze a Home Assistant installation."
+    prog="housecall", description="Analyze a Home Assistant installation."
     )
 
     parser.add_argument(
@@ -41,6 +41,11 @@ def main():
     doctor_parser = subparsers.add_parser(
         "doctor",
         help="Check the HouseCall installation.",
+    )
+
+    housekeeping_parser = subparsers.add_parser(
+        "housekeeping",
+        help="Run Housekeeping checks.",
     )
 
     doctor_parser.add_argument(
@@ -70,6 +75,10 @@ def main():
 
     if args.command == "doctor":
         run_doctor(args.verbose)
+        return
+
+    if args.command == "housekeeping":
+        run_housekeeping()
         return
 
     from .logging_config import configure_logging
