@@ -1,4 +1,3 @@
-
 from housecall.health import UnknownEntitiesHealthCheck
 
 

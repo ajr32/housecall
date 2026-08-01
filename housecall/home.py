@@ -38,13 +38,13 @@ def show_home():
             print()
 
         if choice == "2":
-#            verbose = input("\nVerbose output? (y/N): ").strip().lower() == "y"
+            #            verbose = input("\nVerbose output? (y/N): ").strip().lower() == "y"
 
             run_housekeeping()
             input("\nPress Enter to return to the Home Screen...")
             print()
 
-        #if choice == "3":
+        # if choice == "3":
         #    run_version()
         #     input("\nPress Enter to return to the Home Screen...")
         #     print()

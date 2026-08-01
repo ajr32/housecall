@@ -9,26 +9,37 @@ from websocket import create_connection
 from .config import HA_TOKEN, HA_URL
 from .exceptions import APIError
 
+# ============================================================================
+# Home Assistant WebSocket Client
+# ============================================================================
+
 
 class HomeAssistantWebSocketClient:
     """Communicate with Home Assistant via WebSocket."""
 
     def __init__(self):
-        ws_url = HA_URL.replace("http://", "ws://").replace(
-            "https://", "wss://"
+        ws_url = HA_URL.replace(
+            "http://",
+            "ws://",
+        ).replace(
+            "https://",
+            "wss://",
         )
+
         self.url = f"{ws_url}/api/websocket"
         self.ws = None
         self.message_id = 1
+
+    # ------------------------------------------------------------------------
+    # Connection Management
+    # ------------------------------------------------------------------------
 
     def connect(self):
         """Connect and authenticate."""
 
         self.ws = create_connection(self.url)
 
-        #
         # Receive auth_required
-        #
         self.ws.recv()
 
         self.ws.send(
@@ -45,6 +56,16 @@ class HomeAssistantWebSocketClient:
         if response["type"] != "auth_ok":
             raise APIError("Authentication failed.")
 
+    def close(self):
+        """Close the websocket."""
+
+        if self.ws:
+            self.ws.close()
+
+    # ------------------------------------------------------------------------
+    # Generic Commands
+    # ------------------------------------------------------------------------
+
     def send(self, command):
         """Send a command and return the result."""
 
@@ -60,14 +81,9 @@ class HomeAssistantWebSocketClient:
 
         return response["result"]
 
-    def get_device_registry(self):
-        """Retrieve the Home Assistant device registry."""
-
-        return self.send(
-            {
-                "type": "config/device_registry/list",
-            }
-        )
+    # ------------------------------------------------------------------------
+    # Registry Methods
+    # ------------------------------------------------------------------------
 
     def get_entity_registry(self):
         """Retrieve the Home Assistant entity registry."""
@@ -78,12 +94,12 @@ class HomeAssistantWebSocketClient:
             }
         )
 
-    def get_automations(self):
-        """Retrieve all automations."""
+    def get_device_registry(self):
+        """Retrieve the Home Assistant device registry."""
 
         return self.send(
             {
-                "type": "config/automation/list",
+                "type": "config/device_registry/list",
             }
         )
 
@@ -97,14 +113,29 @@ class HomeAssistantWebSocketClient:
         )
 
     def get_label_registry(self):
+        """Retrieve the Home Assistant label registry."""
+
         return self.send(
             {
                 "type": "config/label_registry/list",
             }
         )
 
-    def close(self):
-        """Close the websocket."""
+    def get_floor_registry(self):
+        """Retrieve the Home Assistant floor registry."""
 
-        if self.ws:
-            self.ws.close()
+        return self.send(
+            {
+                "type": "config/floor_registry/list",
+            }
+        )
+
+    # ------------------------------------------------------------------------
+    # Future Methods
+    # ------------------------------------------------------------------------
+
+    # def get_floor_registry(self):
+    #     ...
+    #
+    # def get_automations(self):
+    #     ...

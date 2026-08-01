@@ -29,8 +29,7 @@ def test_stale_entities_fail(monkeypatch):
                 {
                     "entity_id": "sensor.one",
                     "last_updated": (
-                        datetime.now(timezone.utc)
-                        - timedelta(days=30)
+                        datetime.now(timezone.utc) - timedelta(days=30)
                     ).isoformat(),
                 },
             ]

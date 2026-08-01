@@ -10,7 +10,6 @@ from housecall.exceptions import APIError, ConfigurationError
 from .diagnostics import Diagnostic
 from .scanner import scan
 
-
 # ============================================================================
 # Base Classes
 # ============================================================================
@@ -234,9 +233,7 @@ class StaleEntitiesHealthCheck(HealthCheck):
             if not entity_id or not last_updated:
                 continue
 
-            updated = datetime.fromisoformat(
-                last_updated.replace("Z", "+00:00")
-            )
+            updated = datetime.fromisoformat(last_updated.replace("Z", "+00:00"))
 
             if updated < cutoff:
                 stale.append(entity_id)
@@ -311,36 +308,6 @@ class OrphanedEntitiesHealthCheck(HealthCheck):
 
 
 # ============================================================================
-# Helper Checks
-# ============================================================================
-
-
-class DuplicateHelpersHealthCheck(HealthCheck):
-    """Checks for duplicate Home Assistant helpers."""
-
-    def __init__(self):
-        super().__init__("Duplicate Helpers")
-
-    def run(self) -> Diagnostic:
-        inventory = scan()
-
-        duplicates = inventory["summary"]["duplicate_helpers"]
-
-        if duplicates:
-            return Diagnostic(
-                self.name,
-                False,
-                f"{len(duplicates)} duplicate helpers detected",
-            )
-
-        return Diagnostic(
-            self.name,
-            True,
-            "None found",
-        )
-
-
-# ============================================================================
 # Area Registry Checks
 # ============================================================================
 
@@ -401,6 +368,66 @@ class EmptyLabelsHealthCheck(HealthCheck):
 
 
 # ============================================================================
+# Empty Floor Checks
+# ============================================================================
+
+
+class EmptyFloorsHealthCheck(HealthCheck):
+    """Checks for empty Home Assistant floors."""
+
+    def __init__(self):
+        super().__init__("Empty Floors")
+
+    def run(self) -> Diagnostic:
+        inventory = scan()
+
+        empty = inventory["summary"]["empty_floors"]
+
+        if empty:
+            return Diagnostic(
+                self.name,
+                False,
+                f"{len(empty)} empty floors detected",
+            )
+
+        return Diagnostic(
+            self.name,
+            True,
+            "None found",
+        )
+
+
+# ============================================================================
+# Duplicate Objects Check
+# ============================================================================
+
+
+class DuplicateObjectsHealthCheck(HealthCheck):
+    """Checks for duplicate Home Assistant objects."""
+
+    def __init__(self):
+        super().__init__("Duplicate Objects")
+
+    def run(self) -> Diagnostic:
+        inventory = scan()
+
+        duplicates = inventory["summary"]["duplicate_objects"]
+
+        if duplicates:
+            return Diagnostic(
+                self.name,
+                False,
+                f"{len(duplicates)} duplicate objects detected",
+            )
+
+        return Diagnostic(
+            self.name,
+            True,
+            "None found",
+        )
+
+
+# ============================================================================
 # Health Check Registry
 # ============================================================================
 
@@ -415,7 +442,8 @@ HEALTH_CHECKS = [
     StaleEntitiesHealthCheck(),
     DisabledEntitiesHealthCheck(),
     OrphanedEntitiesHealthCheck(),
-    DuplicateHelpersHealthCheck(),
     EmptyAreasHealthCheck(),
     EmptyLabelsHealthCheck(),
+    EmptyFloorsHealthCheck(),
+    DuplicateObjectsHealthCheck(),
 ]

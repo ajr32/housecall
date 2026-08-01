@@ -73,6 +73,7 @@ def run_doctor(verbose=False):
     else:
         print("Status : FAIL")
 
+
 def run_housekeeping(verbose=False):
     """Run HouseCall housekeeping."""
 

@@ -22,7 +22,7 @@ def show_menu():
 
 def main():
     parser = argparse.ArgumentParser(
-    prog="housecall", description="Analyze a Home Assistant installation."
+        prog="housecall", description="Analyze a Home Assistant installation."
     )
 
     parser.add_argument(
