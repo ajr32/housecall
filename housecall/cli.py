@@ -8,12 +8,13 @@ import argparse
 import logging
 
 from .analyzer import analyze
-from .commands import run_housekeeping, run_triage
+from .commands import (run_housekeeping, run_triage, run_organization)
 from .console import section
 from .home import show_home
 from .report import save_json
 from .scanner import scan
 from .settings import settings
+
 
 # ============================================================================
 # Menu
@@ -86,6 +87,18 @@ def main():
         help="Show detailed diagnostic output.",
     )
 
+    organization_parser = subparsers.add_parser(
+        "organization",
+        help="Check for cleanup opportunities.",
+    )
+
+    organization_parser.add_argument(
+        "-v",
+        "--verbose",
+        action="store_true",
+        help="Show detailed diagnostic output."
+    )
+
     args = parser.parse_args()
 
     # ------------------------------------------------------------------------
@@ -112,8 +125,12 @@ def main():
         run_triage(args.verbose)
         return
 
-    if args.command == "housekeeping":
+    elif args.command == "housekeeping":
         run_housekeeping(args.verbose)
+        return
+
+    elif args.command == "organization":
+        run_organization()
         return
 
     # ------------------------------------------------------------------------

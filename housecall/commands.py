@@ -101,3 +101,47 @@ def run_housekeeping(verbose=False):
         build_cleanup_report,
         verbose,
     )
+
+def run_organization():
+    """Display the Organization menu."""
+
+    while True:
+        print()
+        print("HouseCall Organization")
+        print("======================")
+        print()
+        print("Inventory")
+        print("---------")
+        print("1. Areas")
+        print()
+        print("0. Back")
+        print()
+
+        choice = input("Selection: ").strip()
+
+        if choice == "1":
+            run_inventory_areas()
+
+        elif choice == "0":
+            return
+
+        else:
+            print("Invalid selection.")
+
+def run_inventory_areas():
+    """Display Home Assistant areas."""
+
+    from .inventory.areas import get_areas
+
+    areas = sorted(get_areas(), key=lambda area: area["name"])
+
+    print()
+    print("Home Assistant Areas")
+    print("====================")
+    print()
+
+    for area in areas:
+        print(area["name"])
+
+    print()
+    print(f"Total Areas: {len(areas)}")
