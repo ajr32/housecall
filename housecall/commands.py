@@ -12,8 +12,13 @@ from .report import (
 )
 
 
-def run_triage(verbose=False):
-    """Run HouseCall diagnostics."""
+def run_report(
+    title,
+    checks,
+    report_builder,
+    verbose=False,
+):
+    """Run a HouseCall report."""
 
     if verbose:
         print("Verbose mode enabled.\n")
@@ -21,15 +26,13 @@ def run_triage(verbose=False):
     runner = DiagnosticRunner()
 
     print()
-    print("HouseCall Health Report")
-    print("=======================")
+    print(title)
+    print("=" * len(title))
     print()
-
-    from .health import HEALTH_CHECKS
 
     overall_start = perf_counter()
 
-    for check in HEALTH_CHECKS:
+    for check in checks:
         if verbose:
             print(f"Running {check.__class__.__name__}...")
 
@@ -46,7 +49,7 @@ def run_triage(verbose=False):
     print("-----------")
 
     total_time = perf_counter() - overall_start
-    report = build_health_report(runner, total_time)
+    report = report_builder(runner, total_time)
     save_json(report)
 
     # Display results
@@ -78,67 +81,23 @@ def run_triage(verbose=False):
         print("Status : FAIL")
 
 
+def run_triage(verbose=False):
+    from .health import HEALTH_CHECKS
+
+    run_report(
+        "HouseCall Health Report",
+        HEALTH_CHECKS,
+        build_health_report,
+        verbose,
+    )
+
+
 def run_housekeeping(verbose=False):
-    """Run HouseCall housekeeping checks."""
-
-    if verbose:
-        print("Verbose mode enabled.\n")
-
-    runner = DiagnosticRunner()
-
-    print()
-    print("HouseCall Housekeeping")
-    print("======================")
-    print()
-
     from .health import HOUSEKEEPING_CHECKS
 
-    overall_start = perf_counter()
-
-    for check in HOUSEKEEPING_CHECKS:
-        if verbose:
-            print(f"Running {check.__class__.__name__}...")
-
-        check_start = perf_counter()
-        result = check.run()
-        elapsed = perf_counter() - check_start
-
-        result.elapsed = elapsed
-
-        runner.add(result)
-
-    print("Diagnostics")
-    print("-----------")
-
-    total_time = perf_counter() - overall_start
-    report = build_cleanup_report(runner, total_time)
-    save_json(report)
-
-    for result in report["checks"]:
-        status = "✓" if result["passed"] else "✗"
-
-        print(
-            f"{status} {result['name']}: {result['message']} ({result['elapsed']:.2f}s)"
-        )
-
-    print()
-    print("Summary")
-    print("-------")
-
-    summary = report["summary"]
-
-    print(f"Checks run : {summary['checks_run']}")
-    print(f"Passed     : {summary['passed']}")
-    print(f"Failed     : {summary['failed']}")
-    print(f"Total time : {summary['runtime']:.2f}s")
-
-    print()
-
-    print()
-    print("Overall Health")
-    print("--------------")
-
-    if runner.success:
-        print("Status : PASS")
-    else:
-        print("Status : FAIL")
+    run_report(
+        "HouseCall Housekeeping",
+        HOUSEKEEPING_CHECKS,
+        build_cleanup_report,
+        verbose,
+    )
