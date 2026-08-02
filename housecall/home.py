@@ -1,6 +1,6 @@
 """Interactive Home Screen for HouseCall."""
 
-from .commands import run_triage, run_housekeeping
+from .commands import run_housekeeping, run_triage
 from .settings import settings
 
 
@@ -18,7 +18,7 @@ def show_home():
         print("--------------------")
         print("1. Clutter - identify unused and redundant items")
         print("2. Triage System - identify issues throughout Home Assistant")
-   
+
         print()
 
         print("Utilities")

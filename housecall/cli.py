@@ -8,13 +8,12 @@ import argparse
 import logging
 
 from .analyzer import analyze
-from .commands import run_triage, run_housekeeping
+from .commands import run_housekeeping, run_triage
 from .console import section
 from .home import show_home
 from .report import save_json
 from .scanner import scan
 from .settings import settings
-
 
 # ============================================================================
 # Menu
@@ -23,7 +22,6 @@ from .settings import settings
 
 def show_menu():
     """Display the HouseCall menu."""
-    pass
 
 
 # ============================================================================
@@ -59,10 +57,10 @@ def main():
 
     subparsers = parser.add_subparsers(dest="command")
 
-    test_parser = subparsers.add_parser(
-        "test",
-        help="Test the Home Assistant connection.",
-    )
+    # test_parser = subparsers.add_parser(
+    #   "test",
+    #   help="Test the Home Assistant connection.",
+    # )
 
     triage_parser = subparsers.add_parser(
         "triage",

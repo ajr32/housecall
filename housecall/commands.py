@@ -5,7 +5,11 @@ HouseCall command implementations.
 from time import perf_counter
 
 from .diagnostics import DiagnosticRunner
-from .report import build_report, save_json
+from .report import (
+    build_cleanup_report,
+    build_health_report,
+    save_json,
+)
 
 
 def run_triage(verbose=False):
@@ -42,7 +46,7 @@ def run_triage(verbose=False):
     print("-----------")
 
     total_time = perf_counter() - overall_start
-    report = build_report(runner, total_time)
+    report = build_health_report(runner, total_time)
     save_json(report)
 
     # Display results
@@ -107,15 +111,14 @@ def run_housekeeping(verbose=False):
     print("-----------")
 
     total_time = perf_counter() - overall_start
-    report = build_report(runner, total_time)
+    report = build_cleanup_report(runner, total_time)
+    save_json(report)
 
     for result in report["checks"]:
         status = "✓" if result["passed"] else "✗"
 
         print(
-            f"{status} {result['name']}: "
-            f"{result['message']} "
-            f"({result['elapsed']:.2f}s)"
+            f"{status} {result['name']}: {result['message']} ({result['elapsed']:.2f}s)"
         )
 
     print()
@@ -128,3 +131,14 @@ def run_housekeeping(verbose=False):
     print(f"Passed     : {summary['passed']}")
     print(f"Failed     : {summary['failed']}")
     print(f"Total time : {summary['runtime']:.2f}s")
+
+    print()
+
+    print()
+    print("Overall Health")
+    print("--------------")
+
+    if runner.success:
+        print("Status : PASS")
+    else:
+        print("Status : FAIL")

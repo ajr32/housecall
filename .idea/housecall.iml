@@ -12,7 +12,7 @@
       <excludeFolder url="file://$MODULE_DIR$/tools/github/issues/organization" />
       <excludeFolder url="file://$MODULE_DIR$/tools/github/issues/reporting" />
     </content>
-    <orderEntry type="jdk" jdkName="C:\Project\housecall\.venv" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="C:\Projects\housecall\.venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
