@@ -102,6 +102,7 @@ def run_housekeeping(verbose=False):
         verbose,
     )
 
+
 def run_organization():
     """Display the Organization menu."""
 
@@ -113,6 +114,10 @@ def run_organization():
         print("Inventory")
         print("---------")
         print("1. Areas")
+        print("2. Floors")
+        print("3. Labels")
+        print("4. Devices")
+        print("5. Entities")
         print()
         print("0. Back")
         print()
@@ -122,26 +127,83 @@ def run_organization():
         if choice == "1":
             run_inventory_areas()
 
+        elif choice == "2":
+            run_inventory_floors()
+
+        elif choice == "3":
+            run_inventory_labels()
+
+        elif choice == "4":
+            run_inventory_devices()
+
+        elif choice == "5":
+            run_inventory_entities()
+
         elif choice == "0":
             return
 
         else:
             print("Invalid selection.")
 
-def run_inventory_areas():
-    """Display Home Assistant areas."""
 
+def run_inventory(title, items, key="name"):
+    """Display a Home Assistant inventory."""
+
+    items = sorted(items, key=lambda item: item[key])
+
+    print()
+    print(title)
+    print("=" * len(title))
+    print()
+
+    for item in items:
+        print(item[key])
+
+    print()
+    print(f"Total Items: {len(items)}")
+
+
+def run_inventory_areas():
     from .inventory.areas import get_areas
 
-    areas = sorted(get_areas(), key=lambda area: area["name"])
+    run_inventory(
+        "Home Assistant Areas",
+        get_areas(),
+    )
 
-    print()
-    print("Home Assistant Areas")
-    print("====================")
-    print()
 
-    for area in areas:
-        print(area["name"])
+def run_inventory_floors():
+    """Display Home Assistant"""
+    from .inventory.floors import get_floors
 
-    print()
-    print(f"Total Areas: {len(areas)}")
+    run_inventory(
+        "Home Assistant Floors",
+        get_floors(),
+    )
+
+
+def run_inventory_labels():
+    from .inventory.labels import get_labels
+
+    run_inventory(
+        "Home Assistant Labels",
+        get_labels(),
+    )
+
+
+def run_inventory_devices():
+    from .inventory.devices import get_devices
+
+    run_inventory(
+        "Home Assistant Devices",
+        get_devices(),
+    )
+
+
+def run_inventory_entities():
+    from .inventory.entities import get_entities
+
+    run_inventory(
+        "Home Assistant Entities",
+        get_entities(),
+    )

@@ -8,13 +8,12 @@ import argparse
 import logging
 
 from .analyzer import analyze
-from .commands import (run_housekeeping, run_triage, run_organization)
+from .commands import run_housekeeping, run_organization, run_triage
 from .console import section
 from .home import show_home
 from .report import save_json
 from .scanner import scan
 from .settings import settings
-
 
 # ============================================================================
 # Menu
@@ -93,10 +92,7 @@ def main():
     )
 
     organization_parser.add_argument(
-        "-v",
-        "--verbose",
-        action="store_true",
-        help="Show detailed diagnostic output."
+        "-v", "--verbose", action="store_true", help="Show detailed diagnostic output."
     )
 
     args = parser.parse_args()

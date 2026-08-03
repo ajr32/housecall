@@ -40,6 +40,11 @@ milestones:
       Optionally search trusted community resources to recommend
       integrations, cards, and ideas relevant to the user's installation.
 
+  - title: "v0.8 Polish"
+    description: >
+      Optionally search trusted community resources to recommend
+      integrations, cards, and ideas relevant to the user's installation.
+
   - title: "v0.9 Smart Advisor"
     description: >
       Combine previous analyses into intelligent, prioritized,

@@ -1,18 +1,18 @@
 """
-HouseCall area inventory.
+HouseCall devices inventory.
 """
 
 from ..websocket import HomeAssistantWebSocketClient
 
 
-def get_areas():
-    """Retrieve all Home Assistant areas."""
+def get_devices():
+    """Retrieve all Home Assistant devices."""
 
     ws = HomeAssistantWebSocketClient()
 
     try:
         ws.connect()
-        return ws.get_area_registry()
+        return ws.get_device_registry()
 
     finally:
         ws.close()
