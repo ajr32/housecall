@@ -4,44 +4,44 @@
       "name": "Disabled Entities",
       "passed": false,
       "message": "647 disabled entities detected",
-      "elapsed": 0.3080203999998048
+      "elapsed": 0.32519830006640404
     },
     {
       "name": "Orphaned Entities",
       "passed": true,
       "message": "None found",
-      "elapsed": 0.29120029998011887
+      "elapsed": 0.3428966000210494
     },
     {
       "name": "Duplicate Objects",
       "passed": true,
       "message": "None found",
-      "elapsed": 0.34546590002719313
+      "elapsed": 0.31143960007466376
     },
     {
       "name": "Empty Areas",
       "passed": false,
       "message": "2 empty areas detected",
-      "elapsed": 0.3093208000063896
+      "elapsed": 0.39062959991861135
     },
     {
       "name": "Empty Labels",
       "passed": true,
       "message": "None found",
-      "elapsed": 0.319323500036262
+      "elapsed": 0.31272009992972016
     },
     {
       "name": "Empty Floors",
       "passed": false,
       "message": "1 empty floors detected",
-      "elapsed": 0.32202000002143905
+      "elapsed": 0.31574540003202856
     }
   ],
   "summary": {
     "checks_run": 6,
     "passed": 3,
     "failed": 3,
-    "runtime": 1.8954371000290848,
+    "runtime": 1.9987385000567883,
     "success": false
   }
 }

@@ -4,7 +4,7 @@ Language detectors.
 
 from collections import defaultdict
 
-from ..models import NamingIssue
+from ..models import OrganizationIssue
 
 ABBREVIATIONS = {
     "temp": "temperature",
@@ -48,7 +48,7 @@ def detect_abbreviations(items):
     for variants in groups.values():
         if len(variants) > 1:
             issues.append(
-                NamingIssue(
+                OrganizationIssue(
                     category="Abbreviations",
                     severity="Low",
                     message="Inconsistent abbreviations detected.",
@@ -93,7 +93,7 @@ def detect_pluralization(items):
     for variants in groups.values():
         if len(variants) > 1:
             issues.append(
-                NamingIssue(
+                OrganizationIssue(
                     category="Pluralization",
                     severity="Low",
                     message="Inconsistent pluralization detected.",
@@ -133,7 +133,7 @@ def detect_word_order(items):
     for variants in groups.values():
         if len(variants) > 1:
             issues.append(
-                NamingIssue(
+                OrganizationIssue(
                     category="Word Order",
                     severity="Low",
                     message="Inconsistent word order detected.",

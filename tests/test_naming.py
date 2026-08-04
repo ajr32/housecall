@@ -4,7 +4,6 @@ Tests for HouseCall naming consistency detectors.
 
 from housecall.organization.naming import find_naming_issues
 
-
 #
 # Duplicate Names
 #

@@ -5,7 +5,7 @@ Duplicate name detector.
 import re
 from collections import defaultdict
 
-from ..models import NamingIssue
+from ..models import OrganizationIssue
 
 
 def detect_duplicate_names(items):
@@ -27,7 +27,7 @@ def detect_duplicate_names(items):
     for name, matches in groups.items():
         if len(matches) > 1:
             issues.append(
-                NamingIssue(
+                OrganizationIssue(
                     category="Duplicate Names",
                     severity="Medium",
                     message=f'Duplicate name "{name}" found.',
@@ -62,7 +62,7 @@ def detect_mixed_naming_styles(items):
         return []
 
     return [
-        NamingIssue(
+        OrganizationIssue(
             category="Naming Style",
             severity="Low",
             message="Multiple naming styles detected.",

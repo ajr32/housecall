@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 
 @dataclass
-class NamingIssue:
+class OrganizationIssue:
     """Represents a detected naming inconsistency."""
 
     category: str

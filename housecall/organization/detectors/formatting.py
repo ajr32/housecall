@@ -1,7 +1,7 @@
 import re
 from collections import defaultdict
 
-from ..models import NamingIssue
+from ..models import OrganizationIssue
 
 
 def detect_capitalization(items):
@@ -23,7 +23,7 @@ def detect_capitalization(items):
     for variants in groups.values():
         if len(variants) > 1:
             issues.append(
-                NamingIssue(
+                OrganizationIssue(
                     category="Capitalization",
                     severity="Low",
                     message="Inconsistent capitalization detected.",
@@ -62,7 +62,7 @@ def detect_spacing(items):
     for variants in groups.values():
         if len(variants) > 1:
             issues.append(
-                NamingIssue(
+                OrganizationIssue(
                     category="Spacing",
                     severity="Low",
                     message="Inconsistent spacing detected.",
@@ -101,7 +101,7 @@ def detect_numbering(items):
     for variants in groups.values():
         if len(variants) > 1:
             issues.append(
-                NamingIssue(
+                OrganizationIssue(
                     category="Numbering",
                     severity="Low",
                     message="Inconsistent numbering detected.",
@@ -137,7 +137,7 @@ def detect_punctuation(items):
     for variants in groups.values():
         if len(variants) > 1:
             issues.append(
-                NamingIssue(
+                OrganizationIssue(
                     category="Punctuation",
                     severity="Low",
                     message="Inconsistent punctuation detected.",
