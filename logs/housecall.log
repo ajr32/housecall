@@ -89,3 +89,9 @@
 2026-07-31 21:20:38,352 | INFO     | housecall.cli | Running analysis.
 2026-07-31 21:20:38,352 | INFO     | housecall.cli | Writing inventory to inventory.json.
 2026-07-31 21:20:38,379 | INFO     | housecall.cli | Inventory complete: 750 states, 448 unavailable.
+2026-08-04 00:03:55,536 | INFO     | housecall.cli | HouseCall started.
+2026-08-04 00:03:55,536 | INFO     | housecall.cli | Testing Home Assistant connection.
+2026-08-04 00:16:16,196 | INFO     | housecall.cli | HouseCall started.
+2026-08-04 00:16:16,197 | INFO     | housecall.cli | Testing Home Assistant connection.
+2026-08-04 00:16:41,712 | INFO     | housecall.cli | HouseCall started.
+2026-08-04 00:16:41,713 | INFO     | housecall.cli | Testing Home Assistant connection.

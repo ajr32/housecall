@@ -119,6 +119,11 @@ def run_organization():
         print("4. Devices")
         print("5. Entities")
         print()
+        print("Analysis")
+        print("6. Naming Standards")
+        print("7. Assignment Analysis")
+        print("8. Full Organization Analysis")
+        print()
         print("0. Back")
         print()
 
@@ -138,6 +143,15 @@ def run_organization():
 
         elif choice == "5":
             run_inventory_entities()
+
+        elif choice == "6":
+            run_naming()
+
+ #       elif choice == "7":
+ #           run_assignments()
+
+ #       elif choice == "8":
+#          run_organization_report()
 
         elif choice == "0":
             return
@@ -207,3 +221,10 @@ def run_inventory_entities():
         "Home Assistant Entities",
         get_entities(),
     )
+
+def run_naming():
+    """Run naming analysis."""
+
+    from .organization.reports import run_naming_report
+
+    run_naming_report()

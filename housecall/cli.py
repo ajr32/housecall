@@ -8,7 +8,7 @@ import argparse
 import logging
 
 from .analyzer import analyze
-from .commands import run_housekeeping, run_organization, run_triage
+from .commands import run_housekeeping, run_naming, run_organization, run_triage
 from .console import section
 from .home import show_home
 from .report import save_json
@@ -91,8 +91,9 @@ def main():
         help="Check for cleanup opportunities.",
     )
 
-    organization_parser.add_argument(
-        "-v", "--verbose", action="store_true", help="Show detailed diagnostic output."
+    naming_parser = subparsers.add_parser(
+        "naming",
+        help="Naming consistency analysis."
     )
 
     args = parser.parse_args()
@@ -127,6 +128,10 @@ def main():
 
     elif args.command == "organization":
         run_organization()
+        return
+
+    elif args.command == "naming":
+        run_naming()
         return
 
     # ------------------------------------------------------------------------
