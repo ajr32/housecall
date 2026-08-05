@@ -18,10 +18,7 @@ def test_detect_duplicate_names():
 
     issues = find_naming_issues(items)
 
-    duplicate = [
-        issue for issue in issues
-        if issue.category == "Duplicate Names"
-    ]
+    duplicate = [issue for issue in issues if issue.category == "Duplicate Names"]
 
     assert len(duplicate) == 1
 
@@ -34,10 +31,7 @@ def test_no_duplicate_names():
 
     issues = find_naming_issues(items)
 
-    duplicate = [
-        issue for issue in issues
-        if issue.category == "Duplicate Names"
-    ]
+    duplicate = [issue for issue in issues if issue.category == "Duplicate Names"]
 
     assert duplicate == []
 
@@ -55,10 +49,7 @@ def test_detect_capitalization():
 
     issues = find_naming_issues(items)
 
-    capitalization = [
-        issue for issue in issues
-        if issue.category == "Capitalization"
-    ]
+    capitalization = [issue for issue in issues if issue.category == "Capitalization"]
 
     assert len(capitalization) == 1
 
@@ -71,10 +62,7 @@ def test_no_capitalization():
 
     issues = find_naming_issues(items)
 
-    capitalization = [
-        issue for issue in issues
-        if issue.category == "Capitalization"
-    ]
+    capitalization = [issue for issue in issues if issue.category == "Capitalization"]
 
     assert capitalization == []
 
@@ -93,10 +81,7 @@ def test_detect_spacing():
 
     issues = find_naming_issues(items)
 
-    spacing = [
-        issue for issue in issues
-        if issue.category == "Spacing"
-    ]
+    spacing = [issue for issue in issues if issue.category == "Spacing"]
 
     assert len(spacing) == 1
 
@@ -109,10 +94,7 @@ def test_no_spacing():
 
     issues = find_naming_issues(items)
 
-    spacing = [
-        issue for issue in issues
-        if issue.category == "Spacing"
-    ]
+    spacing = [issue for issue in issues if issue.category == "Spacing"]
 
     assert spacing == []
 
@@ -131,10 +113,7 @@ def test_detect_punctuation():
 
     issues = find_naming_issues(items)
 
-    punctuation = [
-        issue for issue in issues
-        if issue.category == "Punctuation"
-    ]
+    punctuation = [issue for issue in issues if issue.category == "Punctuation"]
 
     assert len(punctuation) == 1
 
@@ -147,10 +126,7 @@ def test_no_punctuation():
 
     issues = find_naming_issues(items)
 
-    punctuation = [
-        issue for issue in issues
-        if issue.category == "Punctuation"
-    ]
+    punctuation = [issue for issue in issues if issue.category == "Punctuation"]
 
     assert punctuation == []
 
@@ -170,10 +146,7 @@ def test_detect_numbering():
 
     issues = find_naming_issues(items)
 
-    numbering = [
-        issue for issue in issues
-        if issue.category == "Numbering"
-    ]
+    numbering = [issue for issue in issues if issue.category == "Numbering"]
 
     assert len(numbering) == 1
 
@@ -186,10 +159,7 @@ def test_no_numbering():
 
     issues = find_naming_issues(items)
 
-    numbering = [
-        issue for issue in issues
-        if issue.category == "Numbering"
-    ]
+    numbering = [issue for issue in issues if issue.category == "Numbering"]
 
     assert numbering == []
 
@@ -208,10 +178,7 @@ def test_detect_abbreviations():
 
     issues = find_naming_issues(items)
 
-    abbreviations = [
-        issue for issue in issues
-        if issue.category == "Abbreviations"
-    ]
+    abbreviations = [issue for issue in issues if issue.category == "Abbreviations"]
 
     assert len(abbreviations) == 1
 
@@ -224,10 +191,7 @@ def test_no_abbreviations():
 
     issues = find_naming_issues(items)
 
-    abbreviations = [
-        issue for issue in issues
-        if issue.category == "Abbreviations"
-    ]
+    abbreviations = [issue for issue in issues if issue.category == "Abbreviations"]
 
     assert abbreviations == []
 
@@ -245,10 +209,7 @@ def test_detect_pluralization():
 
     issues = find_naming_issues(items)
 
-    pluralization = [
-        issue for issue in issues
-        if issue.category == "Pluralization"
-    ]
+    pluralization = [issue for issue in issues if issue.category == "Pluralization"]
 
     assert len(pluralization) == 1
 
@@ -261,10 +222,7 @@ def test_no_pluralization():
 
     issues = find_naming_issues(items)
 
-    pluralization = [
-        issue for issue in issues
-        if issue.category == "Pluralization"
-    ]
+    pluralization = [issue for issue in issues if issue.category == "Pluralization"]
 
     assert pluralization == []
 
@@ -284,10 +242,7 @@ def test_detect_mixed_naming_styles():
 
     issues = find_naming_issues(items)
 
-    styles = [
-        issue for issue in issues
-        if issue.category == "Naming Style"
-    ]
+    styles = [issue for issue in issues if issue.category == "Naming Style"]
 
     assert len(styles) == 1
 
@@ -301,10 +256,7 @@ def test_no_mixed_naming_styles():
 
     issues = find_naming_issues(items)
 
-    styles = [
-        issue for issue in issues
-        if issue.category == "Naming Style"
-    ]
+    styles = [issue for issue in issues if issue.category == "Naming Style"]
 
     assert styles == []
 
@@ -322,10 +274,7 @@ def test_detect_word_order():
 
     issues = find_naming_issues(items)
 
-    order = [
-        issue for issue in issues
-        if issue.category == "Word Order"
-    ]
+    order = [issue for issue in issues if issue.category == "Word Order"]
 
     assert len(order) == 1
 
@@ -338,9 +287,6 @@ def test_no_word_order():
 
     issues = find_naming_issues(items)
 
-    order = [
-        issue for issue in issues
-        if issue.category == "Word Order"
-    ]
+    order = [issue for issue in issues if issue.category == "Word Order"]
 
     assert order == []

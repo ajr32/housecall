@@ -147,11 +147,11 @@ def run_organization():
         elif choice == "6":
             run_naming()
 
- #       elif choice == "7":
- #           run_assignments()
+        elif choice == "7":
+            run_assignments()
 
- #       elif choice == "8":
-#          run_organization_report()
+        elif choice == "8":
+            run_organization_analysis()
 
         elif choice == "0":
             return
@@ -222,9 +222,24 @@ def run_inventory_entities():
         get_entities(),
     )
 
+
 def run_naming():
     """Run naming analysis."""
 
     from .organization.reports import run_naming_report
 
     run_naming_report()
+
+def run_assignments():
+    """Run assignment analysis."""
+
+    from .organization.reports import run_assignment_report
+
+    run_assignment_report()
+
+def run_organization_analysis():
+    """Run organization analysis."""
+
+    from .organization.reports import run_organization_report
+
+    run_organization_report()

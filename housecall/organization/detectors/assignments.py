@@ -60,6 +60,7 @@ def detect_unassigned_entities(entities):
 
     return issues
 
+
 def detect_empty_areas(areas, devices):
     """
     Detect Areas that contain no devices.
@@ -68,9 +69,7 @@ def detect_empty_areas(areas, devices):
     """
 
     assigned_area_ids = {
-        device.get("area_id")
-        for device in devices
-        if device.get("area_id")
+        device.get("area_id") for device in devices if device.get("area_id")
     }
 
     issues = []
@@ -93,6 +92,7 @@ def detect_empty_areas(areas, devices):
 
     return issues
 
+
 def detect_empty_floors(floors, areas):
     """
     Detect Floors that contain no Areas.
@@ -101,9 +101,7 @@ def detect_empty_floors(floors, areas):
     """
 
     assigned_floor_ids = {
-        area.get("floor_id")
-        for area in areas
-        if area.get("floor_id")
+        area.get("floor_id") for area in areas if area.get("floor_id")
     }
 
     issues = []
@@ -125,6 +123,7 @@ def detect_empty_floors(floors, areas):
         )
 
     return issues
+
 
 def detect_unused_labels(labels, devices, entities):
     """

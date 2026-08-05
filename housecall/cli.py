@@ -57,10 +57,6 @@ def main():
 
     subparsers = parser.add_subparsers(dest="command")
 
-    # test_parser = subparsers.add_parser(
-    #   "test",
-    #   help="Test the Home Assistant connection.",
-    # )
 
     triage_parser = subparsers.add_parser(
         "triage",
@@ -86,14 +82,14 @@ def main():
         help="Show detailed diagnostic output.",
     )
 
-    organization_parser = subparsers.add_parser(
+    subparsers.add_parser(
         "organization",
         help="Check for cleanup opportunities.",
     )
 
-    naming_parser = subparsers.add_parser(
+    subparsers.add_parser(
         "naming",
-        help="Naming consistency analysis."
+        help="Naming consistency analysis.",
     )
 
     args = parser.parse_args()
