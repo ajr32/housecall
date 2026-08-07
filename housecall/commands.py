@@ -8,6 +8,7 @@ from .diagnostics import DiagnosticRunner
 from .report import (
     build_cleanup_report,
     build_health_report,
+    build_inventory_report,
     save_json,
 )
 
@@ -118,11 +119,13 @@ def run_organization():
         print("3. Labels")
         print("4. Devices")
         print("5. Entities")
+        print("6. Export Inventory")
         print()
         print("Analysis")
-        print("6. Naming Standards")
-        print("7. Assignment Analysis")
-        print("8. Full Organization Analysis")
+        print("---------")
+        print("7. Naming Standards")
+        print("8. Assignment Analysis")
+        print("9. Full Organization Analysis")
         print()
         print("0. Back")
         print()
@@ -145,12 +148,15 @@ def run_organization():
             run_inventory_entities()
 
         elif choice == "6":
-            run_naming()
+            run_export_inventory()
 
         elif choice == "7":
-            run_assignments()
+            run_naming()
 
         elif choice == "8":
+            run_assignments()
+
+        elif choice == "9":
             run_organization_analysis()
 
         elif choice == "0":
@@ -158,24 +164,6 @@ def run_organization():
 
         else:
             print("Invalid selection.")
-
-
-def run_inventory(title, items, key="name"):
-    """Display a Home Assistant inventory."""
-
-    items = sorted(items, key=lambda item: item[key])
-
-    print()
-    print(title)
-    print("=" * len(title))
-    print()
-
-    for item in items:
-        print(item[key])
-
-    print()
-    print(f"Total Items: {len(items)}")
-
 
 def run_inventory_areas():
     from .inventory.areas import get_areas
@@ -204,7 +192,6 @@ def run_inventory_labels():
         get_labels(),
     )
 
-
 def run_inventory_devices():
     from .inventory.devices import get_devices
 
@@ -220,7 +207,28 @@ def run_inventory_entities():
     run_inventory(
         "Home Assistant Entities",
         get_entities(),
+        key="entity_id",
     )
+
+
+def run_inventory(title, items, key="name"):
+    """Display a Home Assistant inventory."""
+
+    items = sorted(
+        items,
+        key=lambda item: item.get(key) or item.get("entity_id") or "",
+    )
+
+    print()
+    print(title)
+    print("=" * len(title))
+    print()
+
+    for index, item in enumerate(items, start=1):
+        print(f"{index:>4}. {item.get(key) or item.get('entity_id')}")
+
+    print()
+    print(f"Total {title.replace('Home Assistant ', '')}: {len(items)}")
 
 
 def run_naming():
@@ -243,3 +251,20 @@ def run_organization_analysis():
     from .organization.reports import run_organization_report
 
     run_organization_report()
+
+def run_export_inventory():
+    """Export Home Assistant inventory."""
+
+    report = build_inventory_report()
+
+    save_json(report, "inventory.json")
+
+    print()
+    print("Inventory exported successfully.")
+    print(f"Areas   : {report['summary']['areas']}")
+    print(f"Floors  : {report['summary']['floors']}")
+    print(f"Labels  : {report['summary']['labels']}")
+    print(f"Devices : {report['summary']['devices']}")
+    print(f"Entities: {report['summary']['entities']}")
+    print()
+    print("Saved to inventory.json")
